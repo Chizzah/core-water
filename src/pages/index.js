@@ -4,10 +4,10 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-import Truck from '../../resources/backgrounds/delivery-truck.jpg'
-import Water from '../../resources/backgrounds/water-cooler.jpg'
-import Users from '../../resources/backgrounds/multiple-users.png'
-import Mail from '../../resources/backgrounds/send-email.png'
+import Truck from '../../static/backgrounds/delivery-truck.jpg'
+import Water from '../../static/backgrounds/water-cooler.jpg'
+import Users from '../../static/backgrounds/multiple-users.png'
+import Mail from '../../static/backgrounds/send-email.png'
 
 const IndexPage = () => {
   return (

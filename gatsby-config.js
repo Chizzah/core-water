@@ -42,7 +42,7 @@ module.exports = {
         background_color: fullConfig.theme.colors.white,
         theme_color: fullConfig.theme.colors.teal['400'],
         display: `minimal-ui`,
-        icon: `./resources/logo/core-water-16x16.png`,
+        icon: `./static/logo/core-water-32x32.png`,
       },
     },
     {

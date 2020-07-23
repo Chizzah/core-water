@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Logo from '../../resources/logo/core-water-250x250.png'
+import Logo from '../../static/logo/core-water-250x250.png'
 
 const Header = () => {
   return (
