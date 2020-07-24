@@ -3,3 +3,7 @@
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
+
+.hover {
+  transition: 600ms ease;
+}

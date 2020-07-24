@@ -1,20 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'gatsby'
 import { Router } from '@reach/router'
 import { login, logout, isAuthenticated, getProfile } from '../../utils/auth'
-import { Link } from 'gatsby'
+import DatePicker from 'react-datepicker'
 
 import Layout from '../../components/layout'
+import TableContainer from '../../components/tableContainer'
 
 const Dashboard = ({ user }) => {
+  const [startDate, setStartDate] = useState(new Date())
   return (
     <Layout>
       <p className='pt-4 pl-4 text-lg font-semibold text-gray-100'>
         Hi, {user.name ? user.name : 'friend'}!
       </p>
-      <section className='flex items-center justify-center w-full h-screen text-gray-100'>
-        <h1 className='text-3xl font-semibold text-center lg:text-5xl'>
-          Dashboard coming soon...
-        </h1>
+      <section className='flex flex-col items-center justify-center w-full h-screen text-gray-100'>
+        <DatePicker
+          selected={startDate}
+          onChange={(date) => setStartDate(date)}
+        />
+        <TableContainer />
       </section>
     </Layout>
   )
@@ -24,7 +29,7 @@ const Profile = () => {
     <Layout>
       <section className='flex items-center justify-center w-full h-screen text-gray-100'>
         <h1 className='text-3xl font-semibold text-center lg:text-5xl'>
-          User Profile coming soon...
+          My Profile coming soon...
         </h1>
       </section>
     </Layout>
@@ -47,7 +52,7 @@ const Account = () => {
             Dashboard
           </Link>{' '}
           <Link className='lg:ml-4 hover:text-SA-blue' to='/account/profile/'>
-            Profile
+            My Profile
           </Link>{' '}
         </div>
         <div className='flex flex-col items-end justify-start w-full h-full pr-2 lg:pt-4 lg:pr-4'>
@@ -65,6 +70,7 @@ const Account = () => {
       </nav>
       <Router>
         <Dashboard path='/account/' user={user} />
+        {/* <Dashboard path='/account/' /> */}
         <Profile path='/account/profile' />
       </Router>
     </>

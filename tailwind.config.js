@@ -10,6 +10,7 @@ module.exports = {
         'SA-yellow': '#e5c027',
       },
       spacing: {
+        '30': '7rem',
         '80': '20rem',
         '96': '24rem',
         '112': '28rem',
