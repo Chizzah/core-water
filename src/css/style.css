@@ -4,6 +4,15 @@
 /*! purgecss end ignore */
 @tailwind utilities;
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .hover {
   transition: 600ms ease;
+}
+
+input:focus {
+  outline: 0;
 }

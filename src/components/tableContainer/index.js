@@ -1,17 +1,19 @@
 import React, { useState } from 'react'
 
+import '../../css/style.css'
 import TableView from './tableView'
-import TableConfirm from './tableConfirm'
-
-// TableContainer now basically holds different views
+import ConfirmView from './confirmView'
 
 const TableContainer = () => {
-  // we start it with the table-view
   const [view, setView] = useState('table-view')
-  if (view === 'table-view') return <TableView onViewChange={setView} />
-  else if (view === 'confirm-view')
-    return <TableConfirm onViewChange={setView} />
-  else return <div>INVALID VIEW SET</div>
+
+  if (view === 'table-view') {
+    return <TableView onViewChange={(view) => setView(view)} />
+  } else if (view === 'confirm-view') {
+    return <ConfirmView onViewChange={(view) => setView(view)} />
+  } else {
+    return <div>Invalid view. Expected [table-view|confirm-view]</div>
+  }
 }
 
 export default TableContainer
