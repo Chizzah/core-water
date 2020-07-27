@@ -6,9 +6,13 @@ import DatePicker from 'react-datepicker'
 
 import Layout from '../../components/layout'
 import TableContainer from '../../components/tableContainer'
+import 'react-datepicker/dist/react-datepicker.css'
 
 const Dashboard = ({ user }) => {
-  const [startDate, setStartDate] = useState(new Date())
+  const [selectedDate, setSelectedDate] = useState(null)
+  const minDate = new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000)
+  const maxDate = new Date(new Date().getTime() + 60 * 24 * 60 * 60 * 1000)
+
   return (
     <Layout>
       <p className='pt-4 pl-4 text-lg font-semibold text-gray-100'>
@@ -16,8 +20,13 @@ const Dashboard = ({ user }) => {
       </p>
       <section className='flex flex-col items-center justify-center w-full h-screen text-gray-100'>
         <DatePicker
-          selected={startDate}
-          onChange={(date) => setStartDate(date)}
+          className='font-semibold text-center text-gray-900'
+          selected={selectedDate}
+          onChange={(date) => setSelectedDate(date)}
+          dateFormat='dd/MM/yyy'
+          minDate={minDate}
+          maxDate={maxDate}
+          filterDate={(date) => date.getDay() !== 6 && date.getDay() !== 0}
         />
         <TableContainer />
       </section>
