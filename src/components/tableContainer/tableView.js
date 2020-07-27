@@ -4,12 +4,17 @@ import ProductPicker from './productPicker'
 import { ProductItems } from './data'
 import DataTable from './dataTable'
 import Stepper from './stepper'
+import DatePicker from 'react-datepicker'
 
+import 'react-datepicker/dist/react-datepicker.css'
 import Remove from '../../../static/icons/remove.svg'
 
 const TableView = ({ onViewChange }) => {
   const [selectedOption, setSelectedOption] = useState(ProductItems[0].id)
   const [cartItems, setCartItems] = useState([])
+  const [selectedDate, setSelectedDate] = useState(null)
+  const minDate = new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000)
+  const maxDate = new Date(new Date().getTime() + 60 * 24 * 60 * 60 * 1000)
 
   const handleAddItem = (e) => {
     // if item already in the cart just ignore this functino
@@ -51,6 +56,15 @@ const TableView = ({ onViewChange }) => {
 
   return (
     <>
+      <DatePicker
+        className='font-semibold text-center text-gray-900'
+        selected={selectedDate}
+        onChange={(date) => setSelectedDate(date)}
+        dateFormat='dd/MM/yyy'
+        minDate={minDate}
+        maxDate={maxDate}
+        filterDate={(date) => date.getDay() !== 6 && date.getDay() !== 0}
+      />
       <DataTable
         columns={[
           { accessor: 'name', label: 'Product' },
