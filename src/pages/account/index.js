@@ -18,13 +18,33 @@ const Dashboard = ({ user }) => {
     </Layout>
   )
 }
-const Profile = () => {
+const Profile = ({ user }) => {
   return (
     <Layout>
-      <section className='flex items-center justify-center w-full h-screen text-gray-100'>
+      <section className='flex flex-col items-center justify-center w-full h-screen text-gray-100'>
         <h1 className='text-3xl font-semibold text-center lg:text-5xl'>
-          My Profile coming soon...
+          My Profile
         </h1>
+        <div className='flex flex-col items-center justify-center max-w-sm py-6 mx-auto text-center'>
+          <b className='uppercase'>Company Name:</b>
+          <p className='py-3'>
+            {user['https://corewater.co.za/claimsuserMetadata'].company}
+          </p>
+          <b className='uppercase'>Contact Person:</b>
+          <p className='py-3'>
+            {user['https://corewater.co.za/claimsuserMetadata'].liaison}
+          </p>
+          <b className='uppercase'>Phone Number:</b>
+          <p className='py-3'>
+            {user['https://corewater.co.za/claimsuserMetadata'].phone}
+          </p>
+          <b className='uppercase'>Email Address:</b>
+          <p className='py-3'>{user.email}</p>
+          <b className='uppercase'>Delivery Address:</b>
+          <p className='py-3'>
+            {user['https://corewater.co.za/claimsuserMetadata'].address}
+          </p>
+        </div>
       </section>
     </Layout>
   )
@@ -33,10 +53,12 @@ const Profile = () => {
 const Account = () => {
   if (!isAuthenticated()) {
     login()
-    return <p>Redirecting to login...</p>
+    return <p className='py-3'>Redirecting to login...</p>
   }
 
   const user = getProfile()
+
+  console.log(user)
 
   return (
     <>
@@ -64,7 +86,7 @@ const Account = () => {
       </nav>
       <Router>
         <Dashboard path='/account/' user={user} />
-        <Profile path='/account/profile' />
+        <Profile path='/account/profile' user={user} />
       </Router>
     </>
   )
