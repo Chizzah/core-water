@@ -8,9 +8,9 @@ function Layout({ children }) {
     <div>
       <Header />
 
-      <main className='w-full h-auto bg-blue-900'>{children}</main>
+      <main className='w-full h-auto background'>{children}</main>
 
-      <footer className='pb-4 text-xs text-center text-gray-100 bg-blue-900'>
+      <footer className='py-4 text-xs text-center text-gray-100 background-footer'>
         <p>Copyright ©Core Water, 2020. All rights reserved.</p>
         <p>
           JAMstack Website by {''}

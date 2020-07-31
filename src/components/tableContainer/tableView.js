@@ -9,7 +9,7 @@ import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import Remove from '../../../static/icons/remove.svg'
 
-const TableView = ({ onViewChange }) => {
+const TableView = ({ onSubmitData }) => {
   const [selectedOption, setSelectedOption] = useState(ProductItems[0].id)
   const [cartItems, setCartItems] = useState([])
   const [selectedDate, setSelectedDate] = useState(null)
@@ -52,6 +52,10 @@ const TableView = ({ onViewChange }) => {
 
   const handleDelete = (id) => {
     setCartItems(cartItems.filter((v) => v.id !== id))
+  }
+
+  const handleConfirmClick = (e) => {
+    onSubmitData(cartItems)
   }
 
   return (
@@ -159,7 +163,7 @@ const TableView = ({ onViewChange }) => {
           </div>
           <button
             className='w-full h-8 mt-3 font-semibold bg-gray-800 hover hover:bg-gray-700 focus:outline-none'
-            onClick={() => onViewChange('confirm-view')}
+            onClick={handleConfirmClick}
           >
             Submit Order
           </button>

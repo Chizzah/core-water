@@ -4,10 +4,10 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-import Truck from '../../static/backgrounds/delivery-truck.jpg'
-import Water from '../../static/backgrounds/water-cooler.jpg'
-import Users from '../../static/backgrounds/multiple-users.png'
-import Mail from '../../static/backgrounds/send-email.png'
+import Services from '../../static/backgrounds/services.jpg'
+import Products from '../../static/backgrounds/products.jpg'
+import Customers from '../../static/backgrounds/customers.jpg'
+import Contact from '../../static/backgrounds/contact.jpg'
 
 const IndexPage = () => {
   return (
@@ -27,64 +27,65 @@ const IndexPage = () => {
         <section className='w-full py-8 md:py-16 md:mx-auto md:max-w-4xl'>
           <div className='flex flex-col items-center justify-center w-full md:flex-row'>
             <Link to='/services'>
-              <div className='relative flex items-center justify-center text-gray-100 bg-local w-80 h-80 lg:w-112 lg:h-112 bg-SA-green'>
+              <div className='relative flex items-end justify-center text-gray-100 bg-local w-80 h-80 lg:w-112 lg:h-112'>
                 <img
-                  className='absolute top-0 left-0 flex items-center justify-center w-full h-full opacity-25'
-                  src={Truck}
+                  className='absolute top-0 left-0 flex items-center justify-center w-full h-full'
+                  src={Services}
                   alt=''
                 />
-                <h2 className='z-10 text-3xl font-bold text-center uppercase md:text-5xl'>
-                  Our <br className='hidden md:block' /> Services
-                </h2>
+                <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
+                  <h2 className='text-3xl font-bold text-center uppercase md:text-4xl'>
+                    Our Services
+                  </h2>
+                </div>
               </div>
             </Link>
             <Link to='/products'>
-              <div className='relative flex items-center justify-center text-gray-100 w-80 h-80 lg:w-112 lg:h-112 bg-SA-blue'>
+              <div className='relative flex items-end justify-center text-gray-100 w-80 h-80 lg:w-112 lg:h-112'>
                 <img
-                  className='absolute top-0 left-0 flex items-center justify-center w-full h-full opacity-25'
-                  src={Water}
+                  className='absolute top-0 left-0 flex items-center justify-center w-full h-full'
+                  src={Products}
                   alt=''
                 />
-                <h2 className='z-10 text-3xl font-bold text-center uppercase md:text-5xl'>
-                  Our <br className='hidden md:block' /> Products
-                </h2>
+                <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
+                  <h2 className='text-3xl font-bold text-center uppercase md:text-4xl'>
+                    Our Products
+                  </h2>
+                </div>
               </div>
             </Link>
           </div>
           <div className='flex flex-col items-center justify-center w-full md:flex-row'>
             <Link to='/account'>
-              <div className='relative flex items-center justify-center text-gray-100 w-80 h-80 lg:w-112 lg:h-112 bg-SA-red'>
+              <div className='relative flex items-end justify-center text-gray-100 w-80 h-80 lg:w-112 lg:h-112'>
                 <img
-                  className='absolute top-0 left-0 flex items-center justify-center w-full h-full opacity-25'
-                  src={Users}
+                  className='absolute top-0 left-0 flex items-center justify-center w-full h-full'
+                  src={Customers}
                   alt=''
                 />
-                <h2 className='z-10 text-3xl font-bold text-center uppercase md:text-5xl'>
-                  Customer <br className='hidden md:block' /> Zone
-                </h2>
+                <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
+                  <h2 className='text-3xl font-bold text-center uppercase md:text-4xl'>
+                    Customer Zone
+                  </h2>
+                </div>
               </div>
             </Link>
             <Link to='/contact'>
-              <div className='relative flex items-center justify-center text-gray-100 w-80 h-80 lg:w-112 lg:h-112 bg-SA-yellow'>
+              <div className='relative flex items-end justify-center text-gray-100 w-80 h-80 lg:w-112 lg:h-112'>
                 <img
-                  className='absolute top-0 left-0 flex items-center justify-center w-full h-full opacity-25'
-                  src={Mail}
+                  className='absolute top-0 left-0 flex items-center justify-center w-full h-full'
+                  src={Contact}
                   alt=''
                 />
-                <h2 className='z-10 text-3xl font-bold text-center uppercase md:text-5xl'>
-                  Contact <br className='hidden md:block' /> Us
-                </h2>
+                <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
+                  <h2 className='text-3xl font-bold text-center uppercase md:text-4xl'>
+                    Contact Us
+                  </h2>
+                </div>
               </div>
             </Link>
           </div>
         </section>
-        {/* water cooler - Image by <a href="https://pixabay.com/users/Picsues-1416498/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=981167">Susan Sewert</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=981167">Pixabay</a>
-
-        multiple users - Image by <a href="https://pixabay.com/users/toufik-amazigh-2076208/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1331579">toufik-amazigh</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1331579">Pixabay</a>
-
-        delivery truck - Image by <a href='https://www.freepik.com/free-photos-vectors/medical'>Medical vector created by freepik - www.freepik.com</a>
-
-        send mail - Image by <a href="https://pixabay.com/users/talhakhalil007-5671515/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4284157">talha khalil</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4284157">Pixabay</a> */}
       </section>
     </Layout>
   )

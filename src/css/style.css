@@ -16,3 +16,20 @@ body {
 input:focus {
   outline: 0;
 }
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.background {
+  background: rgb(42, 122, 243);
+  background: linear-gradient(
+    180deg,
+    rgba(42, 122, 243, 1) 50%,
+    rgba(15, 84, 224, 1) 75%
+  );
+}
+
+.background-footer {
+  background: rgba(15, 84, 224, 1);
+}

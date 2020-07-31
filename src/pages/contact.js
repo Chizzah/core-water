@@ -24,11 +24,12 @@ const ContactPage = ({ data }) => {
             <address className='flex flex-col items-center justify-center mb-8'>
               <ul>
                 <li>
-                  <strong>Address:</strong> 010 Victoria Street, Oudtshoorn,
-                  6625
+                  <strong>Address:</strong> 21 Lowestoft Street, Paarden Eiland,{' '}
+                  <br />
+                  Cape Town, Western Cape, South Africa
                 </li>
                 <li>
-                  <strong>Phone:</strong> 060 402 3605
+                  <strong>Phone:</strong> 021 510-3788
                 </li>
                 <li className='flex items-start justify-start'>
                   <div>
@@ -36,9 +37,10 @@ const ContactPage = ({ data }) => {
                   </div>
                   <div className='ml-2'>
                     {' '}
-                    Monday 8am-6pm <br /> Tuesday 8am-6pm <br /> Wednesday
-                    8am-6pm <br /> Thursday 8am-6pm <br /> Friday 8am-6pm <br />{' '}
-                    Saturday 9am-12pm <br /> Sunday Closed
+                    Monday 08:00-16:30 <br /> Tuesday 08:00-16:30 <br />{' '}
+                    Wednesday 08:00-16:30 <br /> Thursday 08:00-16:30 <br />{' '}
+                    Friday 08:00-16:00 <br /> Saturday Closed <br /> Sunday
+                    Closed
                   </div>
                 </li>
               </ul>
@@ -75,7 +77,7 @@ const ContactPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    googleMaps: file(relativePath: { eq: "example-google-maps.jpg" }) {
+    googleMaps: file(relativePath: { eq: "core-water-google-maps.jpg" }) {
       childImageSharp {
         fixed(width: 350) {
           ...GatsbyImageSharpFixed_withWebp

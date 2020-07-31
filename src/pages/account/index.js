@@ -44,6 +44,10 @@ const Profile = ({ user }) => {
           <p className='py-3'>
             {user['https://corewater.co.za/claimsuserMetadata'].address}
           </p>
+          <b className='uppercase'>Delivery Day/s:</b>
+          <p className='py-3'>
+            {user['https://corewater.co.za/claimsuserMetadata'].delivery}
+          </p>
         </div>
       </section>
     </Layout>
@@ -57,8 +61,6 @@ const Account = () => {
   }
 
   const user = getProfile()
-
-  console.log(user)
 
   return (
     <>
