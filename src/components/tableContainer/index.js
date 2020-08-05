@@ -4,12 +4,21 @@ import '../../css/style.css'
 import TableView from './tableView'
 import ConfirmView from './confirmView'
 
-const TableContainer = () => {
+const TableContainer = ({ user }) => {
   const [view, setView] = useState('table-view')
   const [data, setData] = useState(null)
+  const [date, setDate] = useState(null)
 
-  const handleSubmission = (data) => {
+  const handleData = (data) => {
     setData(data)
+    setView('confirm-view')
+  }
+
+  const handleDate = (date) => {
+    setDate(date)
+  }
+
+  const handleView = () => {
     setView('confirm-view')
   }
 
@@ -17,12 +26,20 @@ const TableContainer = () => {
     // we replace onViewChange with onSubmission
     return (
       <TableView
-        onSubmitData={handleSubmission}
-        onSubmitDate={handleSubmission}
+        onSubmitData={handleData}
+        onSubmitDate={handleDate}
+        onSubmitView={handleView}
       />
     )
   } else if (view === 'confirm-view') {
-    return <ConfirmView data={data} onViewChange={(view) => setView(view)} />
+    return (
+      <ConfirmView
+        data={data}
+        date={date}
+        onViewChange={(view) => setView(view)}
+        user={user}
+      />
+    )
   } else {
     return <div>Invalid view. Expected [table-view|confirm-view]</div>
   }

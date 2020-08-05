@@ -1,0 +1,125 @@
+import React, { useState } from 'react'
+import axios from 'axios'
+
+const ConfirmView = ({ data, onViewChange }) => {
+  const [mail, setMail] = useState(data)
+  const [serverState, setServerState] = useState({
+    submitting: false,
+    status: null,
+  })
+  const handleServerResponse = (ok, msg, form) => {
+    setServerState({
+      submitting: false,
+      status: { ok, msg },
+    })
+    if (ok) {
+      form.reset()
+    }
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const form = e.target
+    setServerState({ submitting: true })
+    axios({
+      method: 'post',
+      url: 'https://getform.io/f/4dfcfbb9-adfd-49d1-9259-52755b1ecd5a',
+      data: new FormData(form),
+    })
+      .then((r) => {
+        handleServerResponse(true, 'Thanks!', form)
+        console.log(r)
+      })
+      .catch((r) => {
+        handleServerResponse(false, r.response.data.error, form)
+      })
+  }
+
+  const onChange = (e) => {
+    setMail({ mail: e.target.value })
+  }
+
+  return (
+    <>
+      <form onSubmit={handleSubmit}>
+        {data.map((v) => {
+          return (
+            <div
+              className='flex items-center justify-between max-w-xl mx-auto'
+              key={v.id}
+            >
+              <div className='flex items-center justify-start'>
+                <p className='mr-3'>{v.quantity}</p>
+                <p className='mr-3'>x</p>
+                <p className='mr-10'>{v.name}</p>
+              </div>
+              <div>
+                <p>R{v.price * v.quantity}</p>
+              </div>
+            </div>
+          )
+        })}
+        <div>
+          <div className='mt-6'>
+            <span className='font-semibold uppercase'>Total excluding VAT</span>
+            <p className='mr-16'>
+              R
+              {data.map((v) => v.quantity * v.price).reduce((a, b) => a + b, 0)}
+            </p>
+          </div>
+          <div className='mt-6'>
+            <span className='font-semibold uppercase'>Total VAT</span>
+            <p className='mr-16'>
+              R
+              {data
+                .map((v) => [v.quantity * v.price] * 0.15)
+                .reduce((a, b) => a + b, 0)}
+            </p>
+          </div>
+          <div className='mt-6'>
+            <span className='font-semibold uppercase'>Total including VAT</span>
+            <p className='mr-16'>
+              R
+              {data
+                .map((d) => [d.price * 1.15] * d.quantity)
+                .reduce((a, b) => a + b, 0)}
+            </p>
+          </div>
+          <div>
+            {mail.map((m) => (
+              <div key={m.id}>
+                <pre>{JSON.stringify(m, null, 2)}</pre>
+              </div>
+            ))}
+            <button
+              className='px-3 py-2 font-semibold bg-gray-800 rounded hover hover:bg-gray-700 focus:outline-none'
+              onClick={() => onViewChange('table-view')}
+            >
+              Amend Order
+            </button>
+            <input
+              name='payload'
+              type='hidden'
+              value={JSON.stringify(mail, null, 2)}
+              onChange={onChange}
+            />
+            <button
+              type='submit'
+              disabled={serverState.submitting}
+              className='px-3 py-2 ml-3 font-semibold bg-gray-800 rounded hover hover:bg-gray-700 focus:outline-none'
+            >
+              Confirm Order
+            </button>
+            {serverState.status && (
+              <p className={!serverState.status.ok ? 'errorMsg' : ''}>
+                {serverState.status.msg}
+              </p>
+            )}
+          </div>
+        </div>
+      </form>
+    </>
+  )
+}
+
+export default ConfirmView

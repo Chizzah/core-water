@@ -13,7 +13,7 @@ const Dashboard = ({ user }) => {
         Hi, {user.name ? user.name : 'friend'}!
       </p>
       <section className='flex flex-col items-center justify-center w-full h-screen text-gray-100'>
-        <TableContainer />
+        <TableContainer user={user} />
       </section>
     </Layout>
   )

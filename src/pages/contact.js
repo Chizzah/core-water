@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import ContactForm from '../components/contactForm'
 
 const ContactPage = ({ data }) => {
   return (
@@ -68,6 +69,7 @@ const ContactPage = ({ data }) => {
               Get in touch with us for any questions or concerns you may have
               and we`ll get back to you as soon as possible.
             </p>
+            <ContactForm />
           </div>
         </section>
       </section>
