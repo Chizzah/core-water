@@ -21,7 +21,7 @@ const ConfirmView = ({ data, date, onViewChange, user }) => {
 
   return (
     <>
-      <p>{date.toDateString()}</p>
+      <p>{`You order will be delivered on ${date.toDateString()}`}</p>
       {data.map((v) => {
         return (
           <div

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import moment from 'moment'
 
 import ProductPicker from './productPicker'
 import { ProductItems } from './data'
@@ -9,13 +10,12 @@ import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import Remove from '../../../static/icons/remove.svg'
 
-const TableView = ({ onSubmitData, onSubmitDate, onSubmitView }) => {
+const TableView = ({ onSubmitData, onSubmitDate, onSubmitView, user }) => {
   const [selectedOption, setSelectedOption] = useState(ProductItems[0].id)
   const [cartItems, setCartItems] = useState([])
   const [selectedDate, setSelectedDate] = useState(null)
-  const minDate = new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000)
-  const maxDate = new Date(new Date().getTime() + 60 * 24 * 60 * 60 * 1000)
 
+  console.log(user['https://corewater.co.za/claimsuserMetadata'].delivery)
   const handleAddItem = (e) => {
     // if item already in the cart just ignore this functino
     if (cartItems.find((v) => v.id === selectedOption)) return
@@ -65,16 +65,48 @@ const TableView = ({ onSubmitData, onSubmitDate, onSubmitView }) => {
   const viewClick = (e) => {
     onSubmitView()
   }
+
+  const today = moment()
+
+  function dateToString(date) {
+    return moment(date).format('dddd, Do MMMM YYYY', true).toString()
+  }
+
+  const calculateDeliveryDay = (weekdayString) => {
+    const weekdayNo = moment().isoWeekday(weekdayString).isoWeekday()
+    const todayNo = moment().isoWeekday()
+    if (todayNo === weekdayNo) {
+      return today.add(1, 'weeks')
+    } else if (todayNo < weekdayNo) {
+      return today.add(weekdayNo - todayNo, 'days')
+    } else if (todayNo > weekdayNo) {
+      return today.add(7 - (todayNo - weekdayNo), 'days')
+    }
+  }
+
+  const startDate = dateToString(
+    calculateDeliveryDay(
+      user['https://corewater.co.za/claimsuserMetadata'].delivery
+    )
+  )
+
   return (
     <>
+      <p className='mb-6'>{`Your next delivery will be made on ${startDate}`}</p>
       <DatePicker
         className='font-semibold text-center text-gray-900'
         selected={selectedDate}
         onChange={(date) => setSelectedDate(date)}
         dateFormat='dd/MM/yyy'
-        minDate={minDate}
-        maxDate={maxDate}
-        filterDate={(date) => date.getDay() !== 6 && date.getDay() !== 0}
+        minDate={new Date()}
+        filterDate={(date) =>
+          date.getDay() ===
+          moment()
+            .isoWeekday(
+              user['https://corewater.co.za/claimsuserMetadata'].delivery
+            )
+            .isoWeekday()
+        }
       />
       <DataTable
         columns={[

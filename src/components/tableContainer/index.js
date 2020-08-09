@@ -29,6 +29,7 @@ const TableContainer = ({ user }) => {
         onSubmitData={handleData}
         onSubmitDate={handleDate}
         onSubmitView={handleView}
+        user={user}
       />
     )
   } else if (view === 'confirm-view') {
