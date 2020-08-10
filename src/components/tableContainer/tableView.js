@@ -13,9 +13,18 @@ import Remove from '../../../static/icons/remove.svg'
 const TableView = ({ onSubmitData, onSubmitDate, onSubmitView, user }) => {
   const [selectedOption, setSelectedOption] = useState(ProductItems[0].id)
   const [cartItems, setCartItems] = useState([])
-  const [selectedDate, setSelectedDate] = useState(null)
+  const [selectedDate, setSelectedDate] = useState(
+    moment()
+      .isoWeekday(user['https://corewater.co.za/claimsuserMetadata'].delivery)
+      .toDate()
+  )
 
-  console.log(user['https://corewater.co.za/claimsuserMetadata'].delivery)
+  const initialDate = moment()
+    .isoWeekday(user['https://corewater.co.za/claimsuserMetadata'].delivery)
+    .toDate()
+
+  console.log(initialDate)
+
   const handleAddItem = (e) => {
     // if item already in the cart just ignore this functino
     if (cartItems.find((v) => v.id === selectedOption)) return
