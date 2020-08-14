@@ -13,7 +13,7 @@ module.exports = {
   siteMetadata: {
     title: `Core Water`,
     description: `We make it easy to order quality water straight to your office in the greater Cape Town area.`,
-    author: `@taylorbryant`,
+    author: `Chadd Web Design <info@chaddwebdesign.co.za>`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,17 +27,10 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
-        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-tailwind`,
-        short_name: `starter`,
+        name: `Core Water`,
+        short_name: `Core`,
         start_url: `/`,
         background_color: fullConfig.theme.colors.white,
         theme_color: fullConfig.theme.colors.teal['400'],
