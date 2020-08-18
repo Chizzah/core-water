@@ -1,19 +1,38 @@
 import React, { useState } from 'react'
 import moment from 'moment'
-
-import ProductPicker from './productPicker'
-import { ProductItems } from './data'
-import DataTable from './dataTable'
-import Stepper from './stepper'
 import DatePicker from 'react-datepicker'
 
 import 'react-datepicker/dist/react-datepicker.css'
+
+import ProductPicker from './productPicker'
+import DataTable from './dataTable'
+import Stepper from './stepper'
+import { ProductItems } from './data'
+
 import Remove from '../../../static/icons/remove.svg'
 
 const TableView = ({ onSubmitData, onSubmitDate, onSubmitView, user }) => {
   const [selectedOption, setSelectedOption] = useState(ProductItems[0].id)
   const [cartItems, setCartItems] = useState([])
-  const [selectedDate, setSelectedDate] = useState(null)
+
+  const defaultDate = firstDeliveryDate(
+    user['https://corewater.co.za/claimsuserMetadata'].delivery
+  ).toDate()
+
+  const [selectedDate, setSelectedDate] = useState(defaultDate)
+
+  function firstDeliveryDate(weekdayString) {
+    const weekdayNo = moment().isoWeekday(weekdayString).isoWeekday()
+    const today = moment()
+    const todayNo = moment().isoWeekday()
+    if (todayNo === weekdayNo) {
+      return today.add(1, 'weeks')
+    } else if (todayNo < weekdayNo) {
+      return today.add(weekdayNo - todayNo, 'days')
+    } else if (todayNo > weekdayNo) {
+      return today.add(7 - (todayNo - weekdayNo), 'days')
+    }
+  }
 
   const handleAddItem = (e) => {
     // if item already in the cart just ignore this functino
@@ -65,44 +84,25 @@ const TableView = ({ onSubmitData, onSubmitDate, onSubmitView, user }) => {
     onSubmitView()
   }
 
-  // const today = moment()
+  function dateToString(date) {
+    return moment(date).format('dddd, Do MMMM YYYY', true).toString()
+  }
 
-  // function dateToString(date) {
-  //   return moment(date).format('dddd, Do MMMM YYYY', true).toString()
-  // }
-
-  // const usersDeliveryWeekday = moment()
-  //   .isoWeekday(user['https://corewater.co.za/claimsuserMetadata'].delivery)
-  //   .isoWeekday()
-
-  // function firstDeliveryDate(weekdayString) {
-  //   const weekdayNo = moment().isoWeekday(weekdayString).isoWeekday()
-  //   const todayNo = moment().isoWeekday()
-  //   if (todayNo === weekdayNo) {
-  //     return today.add(1, 'weeks')
-  //   } else if (todayNo < weekdayNo) {
-  //     return today.add(weekdayNo - todayNo, 'days')
-  //   } else if (todayNo > weekdayNo) {
-  //     return today.add(7 - (todayNo - weekdayNo), 'days')
-  //   }
-  // }
-
-  // const startDate = dateToString(
-  //   firstDeliveryDate(
-  //     user['https://corewater.co.za/claimsuserMetadata'].delivery
-  //   )
-  // )
+  const startDate = dateToString(
+    firstDeliveryDate(
+      user['https://corewater.co.za/claimsuserMetadata'].delivery
+    )
+  )
 
   return (
     <>
-      {/* <p className='mb-6'>{`Your next delivery will be made on ${startDate}`}</p> */}
-      <p className='font-semibold'>Select your delivery date below:</p>
+      <p className='mb-6'>{`Your next delivery will be made on ${startDate}`}</p>
+      <p className='font-semibold'>Change your delivery date below:</p>
       <p className='mb-6 text-xs'>
         (Please note you can only select the day/s you were assigned to.)
       </p>
       <DatePicker
         className='font-semibold text-center text-gray-900'
-        placeholderText='Click to select a date'
         selected={selectedDate}
         onChange={(date) => setSelectedDate(date)}
         dateFormat='dd/MM/yyy'
