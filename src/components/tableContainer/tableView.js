@@ -13,17 +13,7 @@ import Remove from '../../../static/icons/remove.svg'
 const TableView = ({ onSubmitData, onSubmitDate, onSubmitView, user }) => {
   const [selectedOption, setSelectedOption] = useState(ProductItems[0].id)
   const [cartItems, setCartItems] = useState([])
-  const [selectedDate, setSelectedDate] = useState(
-    moment()
-      .isoWeekday(user['https://corewater.co.za/claimsuserMetadata'].delivery)
-      .toDate()
-  )
-
-  const initialDate = moment()
-    .isoWeekday(user['https://corewater.co.za/claimsuserMetadata'].delivery)
-    .toDate()
-
-  console.log(initialDate)
+  const [selectedDate, setSelectedDate] = useState(null)
 
   const handleAddItem = (e) => {
     // if item already in the cart just ignore this functino
@@ -75,33 +65,41 @@ const TableView = ({ onSubmitData, onSubmitDate, onSubmitView, user }) => {
     onSubmitView()
   }
 
-  const today = moment()
+  // const today = moment()
 
-  function dateToString(date) {
-    return moment(date).format('dddd, Do MMMM YYYY', true).toString()
-  }
+  // function dateToString(date) {
+  //   return moment(date).format('dddd, Do MMMM YYYY', true).toString()
+  // }
 
-  const calculateDeliveryDay = (weekdayString) => {
-    const weekdayNo = moment().isoWeekday(weekdayString).isoWeekday()
-    const todayNo = moment().isoWeekday()
-    if (todayNo === weekdayNo) {
-      return today.add(1, 'weeks')
-    } else if (todayNo < weekdayNo) {
-      return today.add(weekdayNo - todayNo, 'days')
-    } else if (todayNo > weekdayNo) {
-      return today.add(7 - (todayNo - weekdayNo), 'days')
-    }
-  }
+  // const usersDeliveryWeekday = moment()
+  //   .isoWeekday(user['https://corewater.co.za/claimsuserMetadata'].delivery)
+  //   .isoWeekday()
 
-  const startDate = dateToString(
-    calculateDeliveryDay(
-      user['https://corewater.co.za/claimsuserMetadata'].delivery
-    )
-  )
+  // function firstDeliveryDate(weekdayString) {
+  //   const weekdayNo = moment().isoWeekday(weekdayString).isoWeekday()
+  //   const todayNo = moment().isoWeekday()
+  //   if (todayNo === weekdayNo) {
+  //     return today.add(1, 'weeks')
+  //   } else if (todayNo < weekdayNo) {
+  //     return today.add(weekdayNo - todayNo, 'days')
+  //   } else if (todayNo > weekdayNo) {
+  //     return today.add(7 - (todayNo - weekdayNo), 'days')
+  //   }
+  // }
+
+  // const startDate = dateToString(
+  //   firstDeliveryDate(
+  //     user['https://corewater.co.za/claimsuserMetadata'].delivery
+  //   )
+  // )
 
   return (
     <>
-      <p className='mb-6'>{`Your next delivery will be made on ${startDate}`}</p>
+      {/* <p className='mb-6'>{`Your next delivery will be made on ${startDate}`}</p> */}
+      <p className='font-semibold'>Select your delivery date below:</p>
+      <p className='mb-6 text-xs'>
+        (Please note you can only select the day/s you were assigned to.)
+      </p>
       <DatePicker
         className='font-semibold text-center text-gray-900'
         selected={selectedDate}
