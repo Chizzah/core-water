@@ -102,6 +102,7 @@ const TableView = ({ onSubmitData, onSubmitDate, onSubmitView, user }) => {
       </p>
       <DatePicker
         className='font-semibold text-center text-gray-900'
+        placeholderText='Click to select a date'
         selected={selectedDate}
         onChange={(date) => setSelectedDate(date)}
         dateFormat='dd/MM/yyy'
