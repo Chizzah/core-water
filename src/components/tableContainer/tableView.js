@@ -108,6 +108,7 @@ const TableView = ({ onSubmitData, onSubmitDate, onSubmitView, user }) => {
         onChange={(date) => setSelectedDate(date)}
         dateFormat='dd/MM/yyy'
         minDate={new Date()}
+        excludeDates={[new Date()]}
         filterDate={(date) =>
           date.getDay() ===
           moment()
