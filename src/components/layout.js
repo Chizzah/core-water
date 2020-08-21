@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 import Header from './header'
 
+import '../../static/fonts/fonts.css'
+
 function Layout({ children }) {
   return (
     <div>

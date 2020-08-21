@@ -18,7 +18,6 @@ const TableView = ({ onSubmitData, onSubmitDate, onSubmitView, user }) => {
   const defaultDate = firstDeliveryDate(
     user['https://corewater.co.za/claimsuserMetadata'].delivery
   ).toDate()
-
   const [selectedDate, setSelectedDate] = useState(defaultDate)
 
   function firstDeliveryDate(weekdayString) {
@@ -33,7 +32,6 @@ const TableView = ({ onSubmitData, onSubmitDate, onSubmitView, user }) => {
       return today.add(7 - (todayNo - weekdayNo), 'days')
     }
   }
-
   const handleAddItem = (e) => {
     // if item already in the cart just ignore this functino
     if (cartItems.find((v) => v.id === selectedOption)) return
@@ -103,6 +101,9 @@ const TableView = ({ onSubmitData, onSubmitDate, onSubmitView, user }) => {
       </p>
       <DatePicker
         className='font-semibold text-center text-gray-900'
+        selected={selectedDate}
+        onChange={(date) => setSelectedDate(date)}
+        dateFormat='dd/MM/yyy'
         selected={selectedDate}
         onChange={(date) => setSelectedDate(date)}
         dateFormat='dd/MM/yyy'

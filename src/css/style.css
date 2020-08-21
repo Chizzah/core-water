@@ -9,6 +9,10 @@ body {
   padding: 0;
 }
 
+h1 {
+  font-family: 'Arial Rounded MT Bold';
+}
+
 .hover {
   transition: 600ms ease;
 }
