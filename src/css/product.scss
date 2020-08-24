@@ -87,7 +87,7 @@ $primary-color: #bada55;
 
   &__water {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 4) + 15;
+    padding-left: ($_treeview-level-size / 2) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -115,7 +115,7 @@ $primary-color: #bada55;
 
   &__water_dispenser {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 4) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -126,7 +126,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/dispenser-water-bottle.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -143,7 +143,7 @@ $primary-color: #bada55;
 
   &__water_still {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 4) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -154,7 +154,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/still-water-bottle.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -171,7 +171,7 @@ $primary-color: #bada55;
 
   &__water_sparkling {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 4) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -182,7 +182,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/sparkling-water-bottle.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -229,7 +229,7 @@ $primary-color: #bada55;
 
   &__coffee_classic {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 2) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -240,7 +240,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/nestle-classic.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -257,7 +257,7 @@ $primary-color: #bada55;
 
   &__coffee_classic_decaf {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 2) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -268,7 +268,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/nestle-classic-decaf.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -285,7 +285,7 @@ $primary-color: #bada55;
 
   &__coffee_gold {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 2) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -296,7 +296,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/nestle-gold.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -313,7 +313,7 @@ $primary-color: #bada55;
 
   &__coffee_gold_decaf {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 2) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -324,7 +324,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/nestle-gold-decaf.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -341,7 +341,7 @@ $primary-color: #bada55;
 
   &__coffee_ricoffy {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 2) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -352,7 +352,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/nestle-ricoffy.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -399,7 +399,7 @@ $primary-color: #bada55;
 
   &__tea_five_roses {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 2) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -410,7 +410,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/five-roses.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -427,7 +427,7 @@ $primary-color: #bada55;
 
   &__tea_freshpak {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 2) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -438,7 +438,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/freshpak.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -485,7 +485,7 @@ $primary-color: #bada55;
 
   &__hotchocolate_nestle {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 2) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -496,7 +496,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/nestle-hot-chocolate.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -513,7 +513,7 @@ $primary-color: #bada55;
 
   &__hotchocolate_milo {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 2) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -524,7 +524,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/nestle-milo.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -571,7 +571,7 @@ $primary-color: #bada55;
 
   &__coffeecreamers_cremora {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 2) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -582,7 +582,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/nestle-cremora.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -599,7 +599,7 @@ $primary-color: #bada55;
 
   &__coffeecreamers_ellis {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 2) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -610,7 +610,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/ellis-brown-creamer.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -657,7 +657,7 @@ $primary-color: #bada55;
 
   &__sweeteners_white {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 2) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -668,7 +668,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/hulettes-white.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -685,7 +685,7 @@ $primary-color: #bada55;
 
   &__sweeteners_brown {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 2) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -696,7 +696,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/hulettes-brown.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -713,7 +713,7 @@ $primary-color: #bada55;
 
   &__sweeteners_canderel {
     padding: 7px;
-    padding-left: ($_treeview-level-size / 2) + 15;
+    padding-left: ($_treeview-level-size / 8) + 15;
     display: inline-block;
     border-radius: 5px;
     font-weight: 700;
@@ -724,7 +724,7 @@ $primary-color: #bada55;
       content: url('../../static/icons/product/canderel.png');
       transform: scale(0.25);
       position: absolute;
-      left: -($_treeview-level-size / 2);
+      left: -($_treeview-level-size / 1.25);
       top: -6.5px;
       display: flex;
       align-items: center;
@@ -736,6 +736,139 @@ $primary-color: #bada55;
       background-color: $primary-color;
       color: #fff;
       font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .treeview {
+    //Variables
+    $_treeview-level-size: 55px;
+    //General styles for bootstrap
+    .btn-default {
+      border-color: $border-color;
+
+      &:hover {
+        background-color: #f7faea;
+        color: $primary-color;
+      }
+    }
+    // Targetting the HTML Elements for treeview
+    ul {
+      list-style: none;
+      padding-left: 32px;
+
+      li {
+        padding: 50px 0px 0px 35px;
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: -26px;
+          left: -31px;
+          border-left: 2px dashed #fff;
+          width: 1px;
+          height: 100%;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          border-top: 2px dashed #fff;
+          top: 70px;
+          left: -30px;
+          width: 65px;
+        }
+
+        &:last-child:before {
+          top: -22px;
+          height: 90px;
+        }
+      }
+    }
+    // First Level Elements
+    & > ul {
+      & > li {
+        &:after,
+        &:last-child:before {
+          content: unset;
+        }
+
+        &:before {
+          top: 90px;
+          left: 36px;
+        }
+
+        &:not(:last-child) > ul > li {
+          &:before {
+            content: unset;
+          }
+        }
+
+        & > .treeview__level {
+          &:before {
+            height: $_treeview-level-size + 5;
+            width: $_treeview-level-size + 5;
+            top: -9.5px;
+            background-color: #54a6d9;
+            border: 7.5px solid #d5e9f6;
+            font-size: 22px;
+          }
+        }
+
+        & > ul {
+          padding-left: 34px;
+        }
+      }
+    }
+
+    // Water
+
+    &__water {
+      &:before {
+        transform: scale(0.4);
+      }
+    }
+
+    // Coffee
+
+    &__coffee {
+      &:before {
+        transform: scale(0.4);
+      }
+    }
+
+    // Tea
+
+    &__tea {
+      &:before {
+        transform: scale(0.4);
+      }
+    }
+
+    // Hot Chocolate
+
+    &__hotchocolate {
+      &:before {
+        transform: scale(0.4);
+      }
+    }
+
+    // Coffee Creamers
+
+    &__coffeecreamers {
+      &:before {
+        transform: scale(0.4);
+      }
+    }
+
+    // Sweeteners
+
+    &__sweeteners {
+      &:before {
+        transform: scale(0.4);
+      }
     }
   }
 }

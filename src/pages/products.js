@@ -15,13 +15,19 @@ const ProductsPage = () => {
         title='Products'
       />
       <section className='max-w-5xl pt-10 mx-auto mb-10 text-gray-100 md:pt-20 md:mb-20'>
-        <h1 className='text-3xl font-semibold lg:text-6xl'>Our Products</h1>
+        <h1 className='px-2 text-4xl font-semibold lg:text-6xl md:px-4'>
+          Our Products
+        </h1>
       </section>
       <section className='max-w-4xl mx-auto text-gray-100'>
         <TreeView />
         {/* Hand Sanitiser */}
         <div className='flex items-center justify-start mb-12 md:mb-24'>
-          <img className='w-32 h-32' src={HandSanitiser} alt='' />
+          <img
+            className='w-24 h-24 ml-5 md:w-32 md:h-32'
+            src={HandSanitiser}
+            alt=''
+          />
           <p className='ml-2 text-sm font-semibold capitalize md:text-lg md:ml-4'>
             Hand Sanitiser (1 Litre Refill)
           </p>
@@ -30,7 +36,11 @@ const ProductsPage = () => {
         {/* Water Cooler */}
 
         <div className='flex items-center justify-start pb-12 md:pb-24'>
-          <img className='w-32 h-32' src={WaterCooler} alt='' />
+          <img
+            className='w-24 h-24 ml-5 md:w-32 md:h-32'
+            src={WaterCooler}
+            alt=''
+          />
           <p className='ml-2 text-sm font-semibold capitalize md:text-lg md:ml-4'>
             Hand Sanitiser (1 Litre Refill)
           </p>

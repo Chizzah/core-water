@@ -20,15 +20,17 @@ const ServicesPage = () => {
       />
 
       <section className='max-w-6xl pt-10 mx-auto text-gray-100 md:pt-20'>
-        <h1 className='text-3xl font-semibold lg:text-6xl'>Our Services</h1>
+        <h1 className='px-2 text-4xl font-semibold md:text-6xl md:px-4'>
+          Our Services
+        </h1>
       </section>
       <section className='max-w-5xl mx-auto text-gray-100'>
-        <div className='flex flex-col items-start justify-start w-full h-auto'>
+        <div className='flex flex-col items-start justify-start w-full h-auto px-4 md:px-0'>
           <div className='mt-6 md:mt-12'>
             <div>
               <div>
                 <img className='w-40 h-40' src={Truck} alt='' />
-                <h2 className='text-3xl font-bold uppercase md:text-4xl'>
+                <h2 className='text-2xl font-bold uppercase md:text-4xl'>
                   Delivery Service
                 </h2>
                 <p className='mb-6 md:mb-12'>
@@ -51,7 +53,7 @@ const ServicesPage = () => {
             <div>
               <div>
                 <img className='w-40 h-40' src={Map} alt='' />
-                <h2 className='text-3xl font-bold uppercase md:text-4xl'>
+                <h2 className='text-2xl font-bold uppercase md:text-4xl'>
                   Delivery Area
                 </h2>
                 <p className='mb-6 md:mb-12'>
@@ -64,7 +66,7 @@ const ServicesPage = () => {
             <div>
               <div>
                 <img className='w-40 h-40' src={Sanitise} alt='' />
-                <h2 className='text-3xl font-bold uppercase md:text-4xl'>
+                <h2 className='text-2xl font-bold uppercase md:text-4xl'>
                   Water Cooler Cleaning & Sanitising
                 </h2>
                 <p className='mb-6 md:mb-12'>
@@ -79,7 +81,7 @@ const ServicesPage = () => {
             <div>
               <div>
                 <img className='w-40 h-40' src={Repairs} alt='' />
-                <h2 className='text-3xl font-bold uppercase md:text-4xl'>
+                <h2 className='text-2xl font-bold uppercase md:text-4xl'>
                   Water Cooler Repairs
                 </h2>
                 <p className='mb-6 md:mb-12'>
@@ -93,7 +95,7 @@ const ServicesPage = () => {
             <div>
               <div>
                 <img className='w-40 h-40' src={Refill} alt='' />
-                <h2 className='text-3xl font-bold uppercase md:text-4xl'>
+                <h2 className='text-2xl font-bold uppercase md:text-4xl'>
                   Water Refill Outlets
                 </h2>
                 <p className='mb-6 md:mb-12'>
@@ -107,7 +109,7 @@ const ServicesPage = () => {
             </div>
             <div>
               <img className='w-40 h-40' src={Contact} alt='' />
-              <h2 className='text-3xl font-bold uppercase md:text-4xl'>
+              <h2 className='text-2xl font-bold uppercase md:text-4xl'>
                 Contact Us
               </h2>
               <p className='pb-12 md:pb-24'>
