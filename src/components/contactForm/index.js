@@ -1,34 +1,39 @@
 import React from 'react'
-import emailjs from 'emailjs-com'
 
 const ContactForm = () => {
-  function sendEmail(e) {
-    e.preventDefault()
-
-    emailjs
-      .sendForm('gmail', 'basic', e.target, 'user_UtkHT9omV43EyjZuQ0UB6')
-      .then(
-        (result) => {
-          console.log(result.text)
-        },
-        (error) => {
-          console.log(error.text)
-        }
-      )
-  }
-
   return (
     <form
-      className='flex flex-col items-center justify-center text-gray-900'
-      onSubmit={sendEmail}
+      className='flex flex-col items-center justify-center w-full text-gray-900 md:w-128'
+      target='_blank'
+      action='https://formsubmit.co/admin@corewater.co.za'
+      method='POST'
     >
-      <label>Name</label>
-      <input type='text' name='name' />
-      <label>Email</label>
-      <input type='email' name='email' />
-      <label>Message</label>
-      <textarea name='message' />
-      <input type='submit' value='Send' />
+      <input
+        className='w-full mb-2 md:w-3/4 form-input'
+        type='text'
+        placeholder='Name'
+        name='Name'
+        required
+      />
+      <input
+        className='w-full mb-2 md:w-3/4 form-input'
+        type='email'
+        placeholder='Email'
+        name='Email'
+        required
+      />
+      <textarea
+        className='w-full mb-2 md:w-3/4 form-textarea'
+        name='Message'
+        placeholder='Message'
+        required
+        rows='6'
+      />
+
+      <input
+        className='w-full px-3 py-1 text-lg font-semibold text-gray-100 uppercase rounded-md md:w-3/4 bg-SA-green hover:bg-green-400 hover'
+        type='submit'
+      />
     </form>
   )
 }

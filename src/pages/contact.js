@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import ContactForm from '../components/contactForm'
 
 const ContactPage = ({ data }) => {
   return (
@@ -13,12 +14,12 @@ const ContactPage = ({ data }) => {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title='Products'
       />
-      <section className='mx-4 text-lg text-gray-100 lg:text-2xl md:mx-0'>
+      <section className='mx-4 text-lg text-gray-100 md:text-2xl md:mx-0'>
         {/* Business Details */}
 
-        <section className='flex flex-col items-center justify-around py-10 lg:flex-row lg:py-20'>
+        <section className='flex flex-col items-center justify-around py-10 md:flex-row md:py-20'>
           <div>
-            <h2 className='mb-8 text-2xl font-semibold text-center underline uppercase lg:text-5xl'>
+            <h2 className='mb-8 text-2xl font-semibold text-center underline uppercase md:text-5xl'>
               Business Details
             </h2>
             <address className='flex flex-col items-center justify-center mb-8'>
@@ -59,15 +60,16 @@ const ContactPage = ({ data }) => {
 
         {/* Contact Section */}
 
-        <section className='flex flex-col items-center justify-around py-10 lg:flex-row lg:h-128 lg:py-20'>
-          <div className='flex flex-col items-center justify-center text-center lg:w-7/12'>
-            <h2 className='mb-4 text-xl font-semibold uppercase lg:mb-8 lg:text-5xl'>
+        <section className='flex flex-col items-center justify-around py-10 md:flex-row md:py-20'>
+          <div className='flex flex-col items-center justify-center text-center md:w-7/12'>
+            <h2 className='mb-4 text-xl font-semibold uppercase md:mb-8 md:text-5xl'>
               Looking forward to <br /> hearing from you!
             </h2>
-            <p className='mx-2 mb-8 lg:w-9/12 lg:text-2xl'>
+            <p className='mx-2 mb-8 md:w-9/12 md:text-2xl'>
               Get in touch with us for any questions or concerns you may have
               and we`ll get back to you as soon as possible.
             </p>
+            <ContactForm />
           </div>
         </section>
       </section>
