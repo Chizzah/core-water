@@ -10,22 +10,24 @@ function Layout({ children }) {
     <div>
       <Header />
 
-      <main className='w-full h-auto background'>{children}</main>
+      <main className='px-3 py-4 bg-gray-300'>
+        <div className='w-full h-auto shadow-2xl background'>{children}</div>
 
-      <footer className='py-4 text-xs text-center text-gray-100 background-footer'>
-        <p>Copyright ©Core Water, 2020. All rights reserved.</p>
-        <p>
-          JAMstack Website by {''}
-          <a
-            className='font-bold no-underline hover:text-green-500'
-            href='https://chaddwebdesign.co.za'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Chadd Web Design
-          </a>
-        </p>
-      </footer>
+        <footer className='py-4 text-xs text-center text-gray-100 background-footer'>
+          <p>Copyright ©Core Water, 2020. All rights reserved.</p>
+          <p>
+            JAMstack Website by {''}
+            <a
+              className='font-bold no-underline hover:text-green-500'
+              href='https://chaddwebdesign.co.za'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Chadd Web Design
+            </a>
+          </p>
+        </footer>
+      </main>
     </div>
   )
 }
