@@ -10,10 +10,12 @@ function Layout({ children }) {
     <div>
       <Header />
 
-      <main className='px-3 py-4 bg-gray-300'>
-        <div className='w-full h-auto shadow-2xl background'>{children}</div>
+      <main className='px-12 py-16 bg-gray-400'>
+        <div className='w-full h-auto border-t-8 border-l-8 border-r-8 border-gray-100 border-solid shadow-2xl background'>
+          {children}
+        </div>
 
-        <footer className='py-4 text-xs text-center text-gray-100 background-footer'>
+        <footer className='py-4 text-xs text-center text-gray-100 border-b-8 border-l-8 border-r-8 border-gray-100 border-solid background-footer'>
           <p>Copyright ©Core Water, 2020. All rights reserved.</p>
           <p>
             JAMstack Website by {''}
