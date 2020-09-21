@@ -26,6 +26,10 @@ input:focus {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.background-header {
+  background: rgb(42, 122, 243);
+}
+
 .background {
   background: rgb(42, 122, 243);
   background: linear-gradient(

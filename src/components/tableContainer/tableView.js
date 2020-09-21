@@ -15,6 +15,8 @@ const TableView = ({ onSubmitData, onSubmitDate, onSubmitView, user }) => {
   const [selectedOption, setSelectedOption] = useState(ProductItems[0].id)
   const [cartItems, setCartItems] = useState([])
 
+  console.log(user['https://corewater.co.za/claimsuserMetadata'].delivery)
+
   const defaultDate = firstDeliveryDate(
     user['https://corewater.co.za/claimsuserMetadata'].delivery
   ).toDate()

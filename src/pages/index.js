@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-import Logo from '../../static/logo/core-water-250x250.png'
 import Services from '../../static/backgrounds/services.jpg'
 import Products from '../../static/backgrounds/products.jpg'
 import Customers from '../../static/backgrounds/customers.jpg'
@@ -18,18 +17,11 @@ const IndexPage = () => {
         title='Water Delivery Made Easy'
       />
       <section className='flex flex-col items-center justify-center'>
-        <Link to='/'>
-          <img
-            className='w-24 h-24 mt-6 md:w-48 md:h-48 lg:mt-12'
-            src={Logo}
-            alt='Core Water Logo'
-          />
-        </Link>
-        <h1 className='pt-8 text-3xl font-semibold text-center text-gray-100 uppercase md:text-6xl'>
+        <h1 className='text-2xl font-semibold text-center text-gray-100 uppercase md:text-6xl'>
           Core Premier Water
           <br />
-          <span className='text-xl font-semibold text-center text-gray-100 capitalize md:text-3xl'>
-            Water Delivery Made Easy.
+          <span className='text-lg font-semibold text-center text-gray-100 capitalize md:text-3xl'>
+            Water Delivery Made Easy
           </span>
         </h1>
         <section className='w-full py-8 md:py-16 md:mx-auto md:max-w-4xl'>
