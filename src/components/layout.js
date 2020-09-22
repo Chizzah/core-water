@@ -22,7 +22,7 @@ function Layout({ children }) {
           {children}
         </div>
 
-        <footer className='py-4 text-xs text-center text-gray-100 lg:border-b-16 lg:border-l-16 lg:border-r-16 lg:border-gray-100 lg:border-solid background-footer'>
+        <footer className='pb-4 text-xs text-center text-gray-100 lg:border-b-16 lg:border-l-16 lg:border-r-16 lg:border-gray-100 lg:border-solid background-footer'>
           <p>Copyright © Core Water 2020 | All rights reserved</p>
           <p>
             JAMstack Website by {''}
