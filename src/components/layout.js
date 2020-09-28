@@ -9,7 +9,7 @@ function Layout({ children }) {
   return (
     <div>
       <main className='bg-gray-400 lg:px-24 lg:py-24'>
-        <section className='flex flex-col items-center justify-center background-header lg:border-t-16 lg:border-l-16 lg:border-r-16'>
+        <section className='flex flex-col items-center justify-center background-header lg:border-gray-100 lg:border-t-16 lg:border-l-16 lg:border-r-16'>
           <Link to='/'>
             <img
               className='w-32 h-32 mt-6 md:w-48 md:h-48 lg:mt-12'

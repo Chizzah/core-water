@@ -24,7 +24,7 @@ const IndexPage = () => {
             Water Delivery Made Easy
           </span>
         </h1>
-        <section className='w-full py-5 md:py-10 md:mx-auto md:max-w-4xl'>
+        <section className='w-full pt-2 pb-5 md:pt-4 md:pb-10 md:mx-auto md:max-w-4xl'>
           <div className='flex flex-col items-center justify-center w-full md:flex-row'>
             <Link to='/services'>
               <div className='relative flex items-end justify-center text-gray-100 bg-local w-80 h-80 lg:w-112 lg:h-112'>
