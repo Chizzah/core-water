@@ -15,7 +15,7 @@ const ProductsPage = () => {
         title='Products'
       />
       <section className='max-w-6xl pt-10 mx-auto text-gray-100 md:pt-20'>
-        <h1 className='text-2xl font-semibold leading-none md:text-5xl'>
+        <h1 className='ml-6 text-3xl font-semibold leading-none md:text-5xl'>
           Our <br /> Products
         </h1>
       </section>
