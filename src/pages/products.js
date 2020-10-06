@@ -14,9 +14,9 @@ const ProductsPage = () => {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title='Products'
       />
-      <section className='max-w-5xl pt-10 mx-auto mb-10 text-gray-100 md:pt-20 md:mb-20'>
-        <h1 className='px-2 text-4xl font-semibold lg:text-6xl md:px-4'>
-          Our Products
+      <section className='max-w-6xl pt-10 mx-auto text-gray-100 md:pt-20'>
+        <h1 className='text-4xl font-semibold leading-none md:text-6xl'>
+          Our <br /> Products
         </h1>
       </section>
       <section className='max-w-4xl mx-auto text-gray-100'>

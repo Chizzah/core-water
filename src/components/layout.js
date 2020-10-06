@@ -8,21 +8,21 @@ import '../../static/fonts/fonts.css'
 function Layout({ children }) {
   return (
     <div>
-      <main className='bg-gray-400 lg:px-24 lg:py-24'>
-        <section className='flex flex-col items-center justify-center background-header lg:border-gray-100 lg:border-t-16 lg:border-l-16 lg:border-r-16'>
+      <main className='bg-gray-400 md:px-24 md:py-24'>
+        <section className='flex flex-col items-center justify-center background-header md:border-gray-100 md:border-t-16 md:border-l-16 md:border-r-16'>
           <Link to='/'>
             <img
-              className='w-32 h-32 mt-6 md:w-48 md:h-48 lg:mt-12'
+              className='w-32 h-32 mt-6 md:w-48 md:h-48 md:mt-16'
               src={Logo}
               alt='Core Water Logo'
             />
           </Link>
         </section>
-        <div className='w-full h-auto lg:border-l-16 lg:border-r-16 lg:border-gray-100 lg:border-solid lg:shadow-xl background'>
+        <div className='w-full h-auto md:border-l-16 md:border-r-16 md:border-gray-100 md:border-solid md:shadow-xl background'>
           {children}
         </div>
 
-        <footer className='pb-4 text-xs text-center text-gray-100 lg:border-b-16 lg:border-l-16 lg:border-r-16 lg:border-gray-100 lg:border-solid background-footer'>
+        <footer className='pb-4 text-xs text-center text-gray-100 md:border-b-16 md:border-l-16 md:border-r-16 md:border-gray-100 md:border-solid background-footer'>
           <p>Copyright © Core Water 2020 | All rights reserved</p>
           <p>
             JAMstack Website by {''}
