@@ -20,7 +20,7 @@ const ServicesPage = () => {
       />
 
       <section className='max-w-6xl pt-10 mx-auto text-gray-100 md:pt-20'>
-        <h1 className='text-4xl font-semibold leading-none md:text-6xl'>
+        <h1 className='text-2xl font-semibold leading-none md:text-5xl'>
           Our <br /> Services
         </h1>
       </section>
