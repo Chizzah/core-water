@@ -4,8 +4,8 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-import Services from '../../static/backgrounds/services.jpg'
 import Products from '../../static/backgrounds/products.jpg'
+import Services from '../../static/backgrounds/services.jpg'
 import Customers from '../../static/backgrounds/customers.jpg'
 import Contact from '../../static/backgrounds/contact.jpg'
 
@@ -13,7 +13,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[`core water`, `water delivery`]}
         title='Water Delivery Made Easy'
       />
       <section className='flex flex-col items-center justify-center'>
@@ -25,20 +25,6 @@ const IndexPage = () => {
         </h2>
         <section className='w-full pt-2 pb-5 md:pt-4 md:pb-10 md:mx-auto md:max-w-4xl'>
           <div className='flex flex-col items-center justify-center w-full md:flex-row'>
-            <Link to='/services'>
-              <div className='relative flex items-end justify-center text-gray-100 bg-local w-80 h-80 lg:w-112 lg:h-112'>
-                <img
-                  className='absolute top-0 left-0 flex items-center justify-center w-full h-full'
-                  src={Services}
-                  alt=''
-                />
-                <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
-                  <h2 className='text-3xl font-bold text-center uppercase md:text-4xl'>
-                    Our Services
-                  </h2>
-                </div>
-              </div>
-            </Link>
             <Link to='/products'>
               <div className='relative flex items-end justify-center text-gray-100 w-80 h-80 lg:w-112 lg:h-112'>
                 <img
@@ -49,6 +35,20 @@ const IndexPage = () => {
                 <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
                   <h2 className='text-3xl font-bold text-center uppercase md:text-4xl'>
                     Our Products
+                  </h2>
+                </div>
+              </div>
+            </Link>
+            <Link to='/services'>
+              <div className='relative flex items-end justify-center text-gray-100 bg-local w-80 h-80 lg:w-112 lg:h-112'>
+                <img
+                  className='absolute top-0 left-0 flex items-center justify-center w-full h-full'
+                  src={Services}
+                  alt=''
+                />
+                <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
+                  <h2 className='text-3xl font-bold text-center uppercase md:text-4xl'>
+                    Our Services
                   </h2>
                 </div>
               </div>
