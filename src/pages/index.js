@@ -17,8 +17,8 @@ const IndexPage = () => {
         title='Water Delivery Made Easy'
       />
       <section className='flex flex-col items-center justify-center'>
-        <h1 className='text-2xl font-semibold text-center text-gray-100 uppercase md:text-5xl'>
-          Core Premier Water
+        <h1 className='text-2xl font-semibold text-center text-gray-100 uppercase md:text-4xl'>
+          PREMIER WATER & RELATED PRODUCTS
         </h1>
         <h2 className='text-lg font-semibold text-center text-gray-100 capitalize md:text-3xl'>
           Water Delivery Made Easy
