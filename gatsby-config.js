@@ -36,18 +36,18 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Core Water`,
-        short_name: `Core`,
-        start_url: `/`,
-        background_color: fullConfig.theme.colors.white,
-        theme_color: fullConfig.theme.colors.teal['400'],
-        display: `minimal-ui`,
-        icon: `./static/logo/core-water-32x32.png`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `Core Water`,
+    //     short_name: `Core`,
+    //     start_url: `/`,
+    //     background_color: fullConfig.theme.colors.white,
+    //     theme_color: fullConfig.theme.colors.teal['400'],
+    //     display: `minimal-ui`,
+    //     icon: `./static/logo/core-water-32x32.png`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
