@@ -1,8 +1,63 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import '../../css/product.scss'
 
+import NescafeClassic from '../../images/nescafe-classic-200g-jar.png'
+import NescafeClassicDecaf from '../../images/nescafe-classic-decaf-200g-jar.png'
+import NescafeGold from '../../images/nescafe-gold-200g-jar.png'
+import NescafeGoldDecaf from '../../images/nescafe-gold-decaf-200g-jar.png'
+import NescafeRifcoffy from '../../images/nescafe-ricoffy-750g-tin.png'
+
 const TreeView = () => {
+  const [toggle, isToggle] = useState(false)
+  const [toggle1, isToggle1] = useState(false)
+  const [toggle2, isToggle2] = useState(false)
+  const [toggle3, isToggle3] = useState(false)
+  const [toggle4, isToggle4] = useState(false)
+
+  console.log(toggle, 'button 1')
+  console.log(toggle1, 'button 2')
+
+  const handleClickToggle = () => {
+    isToggle1(false)
+    isToggle2(false)
+    isToggle3(false)
+    isToggle4(false)
+    isToggle(!toggle)
+  }
+
+  const handleClickToggle1 = () => {
+    isToggle(false)
+    isToggle2(false)
+    isToggle3(false)
+    isToggle4(false)
+    isToggle1(!toggle1)
+  }
+
+  const handleClickToggle2 = () => {
+    isToggle1(false)
+    isToggle(false)
+    isToggle3(false)
+    isToggle4(false)
+    isToggle2(!toggle2)
+  }
+
+  const handleClickToggle3 = () => {
+    isToggle1(false)
+    isToggle2(false)
+    isToggle(false)
+    isToggle4(false)
+    isToggle3(!toggle3)
+  }
+
+  const handleClickToggle4 = () => {
+    isToggle1(false)
+    isToggle2(false)
+    isToggle3(false)
+    isToggle(false)
+    isToggle4(!toggle4)
+  }
+
   return (
     <section>
       {/* WATER */}
@@ -51,6 +106,41 @@ const TreeView = () => {
       <div className='mb-12 treeview js-treeview md:mb-24'>
         <ul>
           <li>
+            {toggle === true ? (
+              <img
+                className='absolute top-0 right-0'
+                src={NescafeClassic}
+                alt=''
+              />
+            ) : null}
+            {toggle1 === true ? (
+              <img
+                className='absolute top-0 right-0'
+                src={NescafeClassicDecaf}
+                alt=''
+              />
+            ) : null}
+            {toggle2 === true ? (
+              <img
+                className='absolute top-0 right-0'
+                src={NescafeGold}
+                alt=''
+              />
+            ) : null}
+            {toggle3 === true ? (
+              <img
+                className='absolute top-0 right-0'
+                src={NescafeGoldDecaf}
+                alt=''
+              />
+            ) : null}
+            {toggle4 === true ? (
+              <img
+                className='absolute top-0 right-0'
+                src={NescafeRifcoffy}
+                alt=''
+              />
+            ) : null}
             <div className='treeview__coffee'>
               <span className='ml-4 text-lg font-semibold uppercase md:text-2xl md:ml-8'>
                 Coffee
@@ -60,43 +150,83 @@ const TreeView = () => {
               <li>
                 <div className='treeview__coffee_classic'>
                   <span className='text-xs font-semibold capitalize md:text-lg'>
-                    Nestlé Classic (200g Jar)
+                    Nescafé Classic (200g Jar)
                   </span>
                 </div>
+                <span className='bg-transparent img_hover'>
+                  <button
+                    onClick={handleClickToggle}
+                    className='w-full h-full text-transparent'
+                  >
+                    click
+                  </button>
+                </span>
               </li>
             </ul>
             <ul>
               <li>
                 <div className='treeview__coffee_classic_decaf'>
                   <span className='text-xs font-semibold capitalize md:text-lg'>
-                    Nestlé Classic Decaf (200g Jar)
+                    Nescafé Classic Decaf (200g Jar)
                   </span>
                 </div>
+                <span className='bg-transparent img_hover'>
+                  <button
+                    onClick={handleClickToggle1}
+                    className='w-full h-full text-transparent'
+                  >
+                    click
+                  </button>
+                </span>
               </li>
             </ul>
             <ul>
               <li>
                 <div className='treeview__coffee_gold'>
                   <span className='text-xs font-semibold capitalize md:text-lg'>
-                    Nestlé Gold (200g Jar)
+                    Nescafé Gold (200g Jar)
                   </span>
                 </div>
+                <span className='bg-transparent img_hover'>
+                  <button
+                    onClick={handleClickToggle2}
+                    className='w-full h-full text-transparent'
+                  >
+                    click
+                  </button>
+                </span>
               </li>
             </ul>
             <ul>
               <li>
                 <div className='treeview__coffee_gold_decaf'>
                   <span className='text-xs font-semibold capitalize md:text-lg'>
-                    Nestlé Gold Decaf (200g Jar)
+                    Nescafé Gold Decaf (200g Jar)
                   </span>
                 </div>
+                <span className='bg-transparent img_hover'>
+                  <button
+                    onClick={handleClickToggle3}
+                    className='w-full h-full text-transparent'
+                  >
+                    click
+                  </button>
+                </span>
               </li>
             </ul>
             <ul>
               <li>
                 <div className='treeview__coffee_ricoffy'>
                   <span className='text-xs font-semibold capitalize md:text-lg'>
-                    Nestlé Ricoffy (750g Tin)
+                    Nescafé Ricoffy (750g Tin)
+                  </span>
+                  <span className='bg-transparent img_hover img_hover_last'>
+                    <button
+                      onClick={handleClickToggle4}
+                      className='w-full h-full text-transparent'
+                    >
+                      click
+                    </button>
                   </span>
                 </div>
               </li>
