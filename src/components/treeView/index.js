@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { SRLWrapper } from 'simple-react-lightbox'
+import { useLightbox } from 'simple-react-lightbox'
 
 import '../../css/product.scss'
 
@@ -9,57 +11,17 @@ import NescafeGoldDecaf from '../../images/nescafe-gold-decaf-200g-jar.png'
 import NescafeRifcoffy from '../../images/nescafe-ricoffy-750g-tin.png'
 
 const TreeView = () => {
-  const [toggle, isToggle] = useState(false)
-  const [toggle1, isToggle1] = useState(false)
-  const [toggle2, isToggle2] = useState(false)
-  const [toggle3, isToggle3] = useState(false)
-  const [toggle4, isToggle4] = useState(false)
-
-  console.log(toggle, 'button 1')
-  console.log(toggle1, 'button 2')
-
-  const handleClickToggle = () => {
-    isToggle1(false)
-    isToggle2(false)
-    isToggle3(false)
-    isToggle4(false)
-    isToggle(!toggle)
-  }
-
-  const handleClickToggle1 = () => {
-    isToggle(false)
-    isToggle2(false)
-    isToggle3(false)
-    isToggle4(false)
-    isToggle1(!toggle1)
-  }
-
-  const handleClickToggle2 = () => {
-    isToggle1(false)
-    isToggle(false)
-    isToggle3(false)
-    isToggle4(false)
-    isToggle2(!toggle2)
-  }
-
-  const handleClickToggle3 = () => {
-    isToggle1(false)
-    isToggle2(false)
-    isToggle(false)
-    isToggle4(false)
-    isToggle3(!toggle3)
-  }
-
-  const handleClickToggle4 = () => {
-    isToggle1(false)
-    isToggle2(false)
-    isToggle3(false)
-    isToggle(false)
-    isToggle4(!toggle4)
-  }
+  const { openLightbox } = useLightbox()
 
   return (
     <section>
+      <SRLWrapper>
+        <img className='hidden' src={NescafeClassic} alt='' />
+        <img className='hidden' src={NescafeClassicDecaf} alt='' />
+        <img className='hidden' src={NescafeGold} alt='' />
+        <img className='hidden' src={NescafeGoldDecaf} alt='' />
+        <img className='hidden' src={NescafeRifcoffy} alt='' />
+      </SRLWrapper>
       {/* WATER */}
 
       <div className='my-12 treeview js-treeview md:my-24'>
@@ -106,41 +68,6 @@ const TreeView = () => {
       <div className='mb-12 treeview js-treeview md:mb-24'>
         <ul>
           <li>
-            {toggle === true ? (
-              <img
-                className='absolute top-0 right-0'
-                src={NescafeClassic}
-                alt=''
-              />
-            ) : null}
-            {toggle1 === true ? (
-              <img
-                className='absolute top-0 right-0'
-                src={NescafeClassicDecaf}
-                alt=''
-              />
-            ) : null}
-            {toggle2 === true ? (
-              <img
-                className='absolute top-0 right-0'
-                src={NescafeGold}
-                alt=''
-              />
-            ) : null}
-            {toggle3 === true ? (
-              <img
-                className='absolute top-0 right-0'
-                src={NescafeGoldDecaf}
-                alt=''
-              />
-            ) : null}
-            {toggle4 === true ? (
-              <img
-                className='absolute top-0 right-0'
-                src={NescafeRifcoffy}
-                alt=''
-              />
-            ) : null}
             <div className='treeview__coffee'>
               <span className='ml-4 text-lg font-semibold uppercase md:text-2xl md:ml-8'>
                 Coffee
@@ -155,7 +82,7 @@ const TreeView = () => {
                 </div>
                 <span className='bg-transparent img_hover'>
                   <button
-                    onClick={handleClickToggle}
+                    onClick={() => openLightbox(0)}
                     className='w-full h-full text-transparent'
                   >
                     click
@@ -172,7 +99,7 @@ const TreeView = () => {
                 </div>
                 <span className='bg-transparent img_hover'>
                   <button
-                    onClick={handleClickToggle1}
+                    onClick={() => openLightbox(1)}
                     className='w-full h-full text-transparent'
                   >
                     click
@@ -189,7 +116,7 @@ const TreeView = () => {
                 </div>
                 <span className='bg-transparent img_hover'>
                   <button
-                    onClick={handleClickToggle2}
+                    onClick={() => openLightbox(2)}
                     className='w-full h-full text-transparent'
                   >
                     click
@@ -206,7 +133,7 @@ const TreeView = () => {
                 </div>
                 <span className='bg-transparent img_hover'>
                   <button
-                    onClick={handleClickToggle3}
+                    onClick={() => openLightbox(3)}
                     className='w-full h-full text-transparent'
                   >
                     click
@@ -222,7 +149,7 @@ const TreeView = () => {
                   </span>
                   <span className='bg-transparent img_hover img_hover_last'>
                     <button
-                      onClick={handleClickToggle4}
+                      onClick={() => openLightbox(4)}
                       className='w-full h-full text-transparent'
                     >
                       click

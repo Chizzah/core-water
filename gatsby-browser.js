@@ -1,7 +1,6 @@
-import './src/css/style.css'
-
 import React from 'react'
 import { silentAuth } from './src/utils/auth'
+import SimpleReactLightbox from 'simple-react-lightbox'
 
 class SessionCheck extends React.Component {
   constructor(props) {
@@ -29,5 +28,9 @@ class SessionCheck extends React.Component {
 }
 
 export const wrapRootElement = ({ element }) => {
-  return <SessionCheck>{element}</SessionCheck>
+  return (
+    <SessionCheck>
+      <SimpleReactLightbox>{element}</SimpleReactLightbox>
+    </SessionCheck>
+  )
 }
