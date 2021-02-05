@@ -10,12 +10,28 @@ import NescafeGold from '../../images/nescafe-gold-200g-jar.png'
 import NescafeGoldDecaf from '../../images/nescafe-gold-decaf-200g-jar.png'
 import NescafeRifcoffy from '../../images/nescafe-ricoffy-750g-tin.png'
 
+const options = {
+  buttons: {
+    backgroundColor: 'rgba(30,30,36,0.8)',
+    iconColor: 'rgba(255, 255, 255, 0.8)',
+    iconPadding: '10px',
+    showAutoplayButton: false,
+    showCloseButton: true,
+    showDownloadButton: false,
+    showFullscreenButton: false,
+    showNextButton: true,
+    showPrevButton: true,
+    showThumbnailsButton: false,
+    size: '40px',
+  },
+}
+
 const TreeView = () => {
   const { openLightbox } = useLightbox()
 
   return (
     <section>
-      <SRLWrapper>
+      <SRLWrapper options={options}>
         <img className='hidden' src={NescafeClassic} alt='' />
         <img className='hidden' src={NescafeClassicDecaf} alt='' />
         <img className='hidden' src={NescafeGold} alt='' />
