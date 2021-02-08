@@ -4,6 +4,9 @@ import { useLightbox } from 'simple-react-lightbox'
 
 import '../../css/product.scss'
 
+import DispenserBottle from '../../images/18.9l-dispenser-bottle.png'
+import StillWater from '../../images/500ml-and-330ml-still-water.png'
+import SparklingWater from '../../images/500ml-and-330ml-sparkling-water.png'
 import NescafeClassic from '../../images/nescafe-classic-200g-jar.png'
 import NescafeClassicDecaf from '../../images/nescafe-classic-decaf-200g-jar.png'
 import NescafeGold from '../../images/nescafe-gold-200g-jar.png'
@@ -32,6 +35,9 @@ const TreeView = () => {
   return (
     <section>
       <SRLWrapper options={options}>
+        <img className='hidden' src={DispenserBottle} alt='' />
+        <img className='hidden' src={StillWater} alt='' />
+        <img className='hidden' src={SparklingWater} alt='' />
         <img className='hidden' src={NescafeClassic} alt='' />
         <img className='hidden' src={NescafeClassicDecaf} alt='' />
         <img className='hidden' src={NescafeGold} alt='' />
@@ -55,6 +61,14 @@ const TreeView = () => {
                     Oasis Dispenser Water (5Gal/18,9L)
                   </span>
                 </div>
+                <span className='bg-transparent img_hover'>
+                  <button
+                    onClick={() => openLightbox(0)}
+                    className='w-full h-full text-transparent'
+                  >
+                    click
+                  </button>
+                </span>
               </li>
             </ul>
             <ul>
@@ -64,6 +78,14 @@ const TreeView = () => {
                     Oasis Bottled Still Water (24x500ml)
                   </span>
                 </div>
+                <span className='bg-transparent img_hover'>
+                  <button
+                    onClick={() => openLightbox(1)}
+                    className='w-full h-full text-transparent'
+                  >
+                    click
+                  </button>
+                </span>
               </li>
             </ul>
             <ul>
@@ -73,6 +95,14 @@ const TreeView = () => {
                     Oasis Bottled Sparkling Water (24x330ml)
                   </span>
                 </div>
+                <span className='bg-transparent img_hover'>
+                  <button
+                    onClick={() => openLightbox(2)}
+                    className='w-full h-full text-transparent'
+                  >
+                    click
+                  </button>
+                </span>
               </li>
             </ul>
           </li>
@@ -98,7 +128,7 @@ const TreeView = () => {
                 </div>
                 <span className='bg-transparent img_hover'>
                   <button
-                    onClick={() => openLightbox(0)}
+                    onClick={() => openLightbox(4)}
                     className='w-full h-full text-transparent'
                   >
                     click
@@ -115,7 +145,7 @@ const TreeView = () => {
                 </div>
                 <span className='bg-transparent img_hover'>
                   <button
-                    onClick={() => openLightbox(1)}
+                    onClick={() => openLightbox(5)}
                     className='w-full h-full text-transparent'
                   >
                     click
@@ -132,7 +162,7 @@ const TreeView = () => {
                 </div>
                 <span className='bg-transparent img_hover'>
                   <button
-                    onClick={() => openLightbox(2)}
+                    onClick={() => openLightbox(6)}
                     className='w-full h-full text-transparent'
                   >
                     click
@@ -149,7 +179,7 @@ const TreeView = () => {
                 </div>
                 <span className='bg-transparent img_hover'>
                   <button
-                    onClick={() => openLightbox(3)}
+                    onClick={() => openLightbox(7)}
                     className='w-full h-full text-transparent'
                   >
                     click
@@ -165,7 +195,7 @@ const TreeView = () => {
                   </span>
                   <span className='bg-transparent img_hover img_hover_last'>
                     <button
-                      onClick={() => openLightbox(4)}
+                      onClick={() => openLightbox(8)}
                       className='w-full h-full text-transparent'
                     >
                       click
