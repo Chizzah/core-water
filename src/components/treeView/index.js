@@ -1,6 +1,5 @@
 import React from 'react'
-import { SRLWrapper } from 'simple-react-lightbox'
-import { useLightbox } from 'simple-react-lightbox'
+import { SRLWrapper, useLightbox } from 'simple-react-lightbox'
 
 import '../../css/product.scss'
 
@@ -14,6 +13,9 @@ import NescafeGoldDecaf from '../../images/nescafe-gold-decaf-200g-jar.png'
 import NescafeRifcoffy from '../../images/nescafe-ricoffy-750g-tin.png'
 
 const options = {
+  settings: {
+    disableKeyboardControls: true,
+  },
   buttons: {
     backgroundColor: 'rgba(30,30,36,0.8)',
     iconColor: 'rgba(255, 255, 255, 0.8)',
@@ -22,10 +24,13 @@ const options = {
     showCloseButton: true,
     showDownloadButton: false,
     showFullscreenButton: false,
-    showNextButton: true,
-    showPrevButton: true,
+    showNextButton: false,
+    showPrevButton: false,
     showThumbnailsButton: false,
     size: '40px',
+  },
+  thumbnails: {
+    showThumbnails: false,
   },
 }
 
