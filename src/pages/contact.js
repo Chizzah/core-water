@@ -1,18 +1,16 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import PropTypes from 'prop-types'
+import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import ContactForm from '../components/contactForm'
 
-const ContactPage = ({ data }) => {
+const ContactPage = () => {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title='Products'
+        keywords={[`contact core water`]}
+        title='Contact Core Water'
       />
       <section className='mx-4 text-lg text-gray-100 md:text-2xl md:mx-6'>
         {/* Business Details */}
@@ -53,7 +51,7 @@ const ContactPage = ({ data }) => {
               target='_blank'
               rel='noreferrer noopener'
             >
-              <Img fluid={data.googleMaps.childImageSharp.fluid} />
+              <StaticImage src="../images/core-water-google-maps.jpg" />
             </a>
           </div>
         </section>
@@ -75,21 +73,6 @@ const ContactPage = ({ data }) => {
       </section>
     </Layout>
   )
-}
-
-export const query = graphql`
-  query {
-    googleMaps: file(relativePath: { eq: "core-water-google-maps.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 720) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
-ContactPage.propTypes = {
-  data: PropTypes.object,
 }
 
 export default ContactPage
