@@ -12,7 +12,7 @@ function Layout({ children }) {
         <section className='flex flex-col items-center justify-center pb-2 background-header md:border-gray-100 md:border-t-16 md:border-l-16 md:border-r-16'>
           <Link to='/'>
             <img
-              className='w-32 h-32 mt-6 md:w-48 md:h-48 md:mt-16'
+              className='w-32 h-32 mt-6 md:w-48 md:h-48'
               src={Logo}
               alt='Core Water Logo'
             />
