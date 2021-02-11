@@ -1,8 +1,6 @@
 import React from 'react'
 import { SRLWrapper, useLightbox } from 'simple-react-lightbox'
 
-import '../../css/product.scss'
-
 import DispenserBottle from '../../images/18.9l-dispenser-bottle.png'
 import StillWater from '../../images/500ml-and-330ml-still-water.png'
 import SparklingWater from '../../images/500ml-and-330ml-sparkling-water.png'
@@ -12,14 +10,24 @@ import NescafeGold from '../../images/nescafe-gold-200g-jar.png'
 import NescafeGoldDecaf from '../../images/nescafe-gold-decaf-200g-jar.png'
 import NescafeRifcoffy from '../../images/nescafe-ricoffy-750g-tin.png'
 
+import '../../css/product.scss'
+
+const imgArr = [
+  DispenserBottle,
+  StillWater,
+  SparklingWater,
+  NescafeClassic,
+  NescafeClassicDecaf,
+  NescafeGold,
+  NescafeGoldDecaf,
+  NescafeRifcoffy,
+]
+
 const options = {
   settings: {
     disableKeyboardControls: true,
   },
   buttons: {
-    backgroundColor: 'rgba(30,30,36,0.8)',
-    iconColor: 'rgba(255, 255, 255, 0.8)',
-    iconPadding: '10px',
     showAutoplayButton: false,
     showCloseButton: true,
     showDownloadButton: false,
@@ -27,7 +35,6 @@ const options = {
     showNextButton: false,
     showPrevButton: false,
     showThumbnailsButton: false,
-    size: '40px',
   },
   thumbnails: {
     showThumbnails: false,
@@ -40,14 +47,9 @@ const TreeView = () => {
   return (
     <section>
       <SRLWrapper options={options}>
-        <img className='hidden' src={DispenserBottle} alt='' />
-        <img className='hidden' src={StillWater} alt='' />
-        <img className='hidden' src={SparklingWater} alt='' />
-        <img className='hidden' src={NescafeClassic} alt='' />
-        <img className='hidden' src={NescafeClassicDecaf} alt='' />
-        <img className='hidden' src={NescafeGold} alt='' />
-        <img className='hidden' src={NescafeGoldDecaf} alt='' />
-        <img className='hidden' src={NescafeRifcoffy} alt='' />
+        {imgArr.map((img) => {
+          return <img className='hidden' src={img} />
+        })}
       </SRLWrapper>
       {/* WATER */}
 
@@ -133,7 +135,7 @@ const TreeView = () => {
                 </div>
                 <span className='bg-transparent img_hover'>
                   <button
-                    onClick={() => openLightbox(4)}
+                    onClick={() => openLightbox(3)}
                     className='w-full h-full text-transparent'
                   >
                     click
@@ -150,7 +152,7 @@ const TreeView = () => {
                 </div>
                 <span className='bg-transparent img_hover'>
                   <button
-                    onClick={() => openLightbox(5)}
+                    onClick={() => openLightbox(4)}
                     className='w-full h-full text-transparent'
                   >
                     click
@@ -167,7 +169,7 @@ const TreeView = () => {
                 </div>
                 <span className='bg-transparent img_hover'>
                   <button
-                    onClick={() => openLightbox(6)}
+                    onClick={() => openLightbox(5)}
                     className='w-full h-full text-transparent'
                   >
                     click
@@ -184,7 +186,7 @@ const TreeView = () => {
                 </div>
                 <span className='bg-transparent img_hover'>
                   <button
-                    onClick={() => openLightbox(7)}
+                    onClick={() => openLightbox(6)}
                     className='w-full h-full text-transparent'
                   >
                     click
@@ -200,7 +202,7 @@ const TreeView = () => {
                   </span>
                   <span className='bg-transparent img_hover img_hover_last'>
                     <button
-                      onClick={() => openLightbox(8)}
+                      onClick={() => openLightbox(7)}
                       className='w-full h-full text-transparent'
                     >
                       click
