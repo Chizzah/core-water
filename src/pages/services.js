@@ -1,15 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-
-import Truck from '../../static/icons/service/truck.png'
-import Map from '../../static/icons/service/map.png'
-import Sanitise from '../../static/icons/service/water-cooler-sanitise.png'
-import Repairs from '../../static/icons/service/water-cooler-repairs.png'
-import Refill from '../../static/icons/service/water-cooler-refill-outlets.png'
-import Contact from '../../static/icons/service/contact.png'
 
 const ServicesPage = () => {
   return (
@@ -29,7 +23,12 @@ const ServicesPage = () => {
           <div className='mt-6 md:mt-12'>
             <div>
               <div>
-                <img className='w-40 h-40' src={Truck} alt='' />
+                <StaticImage
+                  className='w-20 h-20 lg:w-40 lg:h-40'
+                  src='../images/truck.png'
+                  alt=''
+                  placeholder='blurred'
+                />
                 <h2 className='text-xl font-bold uppercase md:text-3xl'>
                   Delivery Service
                 </h2>
@@ -52,7 +51,12 @@ const ServicesPage = () => {
 
             <div>
               <div>
-                <img className='w-40 h-40' src={Map} alt='' />
+                <StaticImage
+                  className='w-20 h-20 lg:w-40 lg:h-40'
+                  src='../images/map.png'
+                  alt=''
+                  placeholder='blurred'
+                />
                 <h2 className='text-xl font-bold uppercase md:text-3xl'>
                   Delivery Area
                 </h2>
@@ -65,7 +69,12 @@ const ServicesPage = () => {
 
             <div>
               <div>
-                <img className='w-40 h-40' src={Sanitise} alt='' />
+                <StaticImage
+                  className='w-20 h-20 lg:w-40 lg:h-40'
+                  src='../images/water-cooler-sanitise.png'
+                  alt=''
+                  placeholder='blurred'
+                />
                 <h2 className='text-xl font-bold uppercase md:text-3xl'>
                   Water Cooler Cleaning & Sanitising
                 </h2>
@@ -80,7 +89,12 @@ const ServicesPage = () => {
 
             <div>
               <div>
-                <img className='w-40 h-40' src={Repairs} alt='' />
+                <StaticImage
+                  className='w-20 h-20 lg:w-40 lg:h-40'
+                  src='../images/water-cooler-repairs.png'
+                  alt=''
+                  placeholder='blurred'
+                />
                 <h2 className='text-xl font-bold uppercase md:text-3xl'>
                   Water Cooler Repairs
                 </h2>
@@ -94,7 +108,12 @@ const ServicesPage = () => {
 
             <div>
               <div>
-                <img className='w-40 h-40' src={Refill} alt='' />
+                <StaticImage
+                  className='w-20 h-20 lg:w-40 lg:h-40'
+                  src='../images/water-cooler-refill-outlets.png'
+                  alt=''
+                  placeholder='blurred'
+                />
                 <h2 className='text-xl font-bold uppercase md:text-3xl'>
                   Water Refill Outlets
                 </h2>
@@ -108,7 +127,12 @@ const ServicesPage = () => {
               </div>
             </div>
             <div>
-              <img className='w-40 h-40' src={Contact} alt='' />
+              <StaticImage
+                className='w-20 h-20 lg:w-40 lg:h-40'
+                src='../images/contact.png'
+                alt=''
+                placeholder='blurred'
+              />
               <h2 className='text-xl font-bold uppercase md:text-3xl'>
                 Contact Us
               </h2>

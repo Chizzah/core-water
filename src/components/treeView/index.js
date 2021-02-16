@@ -26,6 +26,7 @@ const imgArr = [
 const options = {
   settings: {
     disableKeyboardControls: true,
+    disableWheelControls: true,
   },
   buttons: {
     showAutoplayButton: false,
@@ -47,8 +48,8 @@ const TreeView = () => {
   return (
     <section>
       <SRLWrapper options={options}>
-        {imgArr.map((img) => {
-          return <img className='hidden' src={img} />
+        {imgArr.map((img, index) => {
+          return <img className='hidden' src={img} key={index} />
         })}
       </SRLWrapper>
       {/* WATER */}
@@ -64,7 +65,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__water_dispenser'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Oasis Dispenser Water (5Gal/18,9L)
                   </span>
                 </div>
@@ -81,8 +82,8 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__water_still'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
-                    Oasis Bottled Still Water (24x500ml)
+                  <span className='text-xs font-semibold capitalize md:text-base'>
+                    Oasis 330ml and 500ml Still Water (Case of 24 Bottles)
                   </span>
                 </div>
                 <span className='bg-transparent img_hover'>
@@ -98,8 +99,8 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__water_sparkling'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
-                    Oasis Bottled Sparkling Water (24x330ml)
+                  <span className='text-xs font-semibold capitalize md:text-base'>
+                    Oasis 330ml and 500ml Sparkling Water (Case of 24 Bottles)
                   </span>
                 </div>
                 <span className='bg-transparent img_hover'>
@@ -129,7 +130,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__coffee_classic'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Nescafé Classic (200g Jar)
                   </span>
                 </div>
@@ -146,7 +147,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__coffee_classic_decaf'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Nescafé Classic Decaf (200g Jar)
                   </span>
                 </div>
@@ -163,7 +164,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__coffee_gold'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Nescafé Gold (200g Jar)
                   </span>
                 </div>
@@ -180,7 +181,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__coffee_gold_decaf'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Nescafé Gold Decaf (200g Jar)
                   </span>
                 </div>
@@ -197,7 +198,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__coffee_ricoffy'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Nescafé Ricoffy (750g Tin)
                   </span>
                   <span className='bg-transparent img_hover img_hover_last'>
@@ -228,7 +229,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__tea_five_roses'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Five Roses Ceylon (102 Tea Bags)
                   </span>
                 </div>
@@ -237,7 +238,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__tea_freshpak'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Freshpak Rooibos (160 Tea Bags)
                   </span>
                 </div>
@@ -260,7 +261,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__hotchocolate_nestle'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Nestlé Hot Chocolate (500g Jar)
                   </span>
                 </div>
@@ -269,7 +270,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__hotchocolate_milo'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Nestlé Milo (500g Jar)
                   </span>
                 </div>
@@ -292,7 +293,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__coffeecreamers_cremora'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Nestlé Cremora (750g Box)
                   </span>
                 </div>
@@ -301,7 +302,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__coffeecreamers_ellis'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Ellis Brown Creamer (750g Box)
                   </span>
                 </div>
@@ -324,7 +325,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__sweeteners_white'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Huletts White Sugar (5kg tubes)
                   </span>
                 </div>
@@ -333,7 +334,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__sweeteners_brown'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Hullets Brown Sugar (5kg tubes)
                   </span>
                 </div>
@@ -342,7 +343,7 @@ const TreeView = () => {
             <ul>
               <li>
                 <div className='treeview__sweeteners_canderel'>
-                  <span className='text-xs font-semibold capitalize md:text-lg'>
+                  <span className='text-xs font-semibold capitalize md:text-base'>
                     Canderel (1 000 sticks)
                   </span>
                 </div>

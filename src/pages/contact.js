@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -8,10 +8,7 @@ import ContactForm from '../components/contactForm'
 const ContactPage = () => {
   return (
     <Layout>
-      <SEO
-        keywords={[`contact core water`]}
-        title='Contact Core Water'
-      />
+      <SEO keywords={[`contact core water`]} title='Contact Core Water' />
       <section className='mx-4 text-lg text-gray-100 md:text-2xl md:mx-6'>
         {/* Business Details */}
 
@@ -51,7 +48,11 @@ const ContactPage = () => {
               target='_blank'
               rel='noreferrer noopener'
             >
-              <StaticImage src="../images/core-water-google-maps.jpg" />
+              <StaticImage
+                src='../images/core-water-google-maps.jpg'
+                alt=''
+                placeholder='blurred'
+              />
             </a>
           </div>
         </section>
