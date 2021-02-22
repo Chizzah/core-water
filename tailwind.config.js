@@ -12,7 +12,7 @@ module.exports = {
       spacing: {
         30: '7rem',
         80: '20rem',
-        112: '25rem',
+        112: '30rem',
         128: '32rem',
       },
       borderWidth: {
