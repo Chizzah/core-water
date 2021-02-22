@@ -28,8 +28,7 @@ const IndexPage = () => {
                   src='../images/products.jpg'
                   alt='Image for our products page'
                   placeholder='blurred'
-                  width={480}
-                  height={480}
+                  layout='fullWidth'
                 />
                 <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
                   <h2 className='text-2xl font-semibold text-center uppercase xl:text-4xl'>
@@ -45,8 +44,7 @@ const IndexPage = () => {
                   src='../images/services.jpg'
                   alt='Image for our services page'
                   placeholder='blurred'
-                  width={480}
-                  height={480}
+                  layout='fullWidth'
                 />
                 <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
                   <h2 className='text-2xl font-semibold text-center uppercase xl:text-4xl'>
@@ -63,8 +61,7 @@ const IndexPage = () => {
                   className='absolute top-0 left-0 flex items-center justify-center w-full h-full'
                   src='../images/customers.jpg'
                   alt='Image for customer zone page'
-                  width={480}
-                  height={480}
+                  layout='fullWidth'
                 />
                 <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
                   <h2 className='text-2xl font-semibold text-center uppercase xl:text-4xl'>
@@ -80,8 +77,7 @@ const IndexPage = () => {
                   src='../images/contact.jpg'
                   alt='Image for contact page'
                   placeholder='blurred'
-                  width={480}
-                  height={480}
+                  layout='fullWidth'
                 />
                 <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
                   <h2 className='text-2xl font-semibold text-center uppercase xl:text-4xl'>
