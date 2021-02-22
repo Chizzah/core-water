@@ -30,7 +30,7 @@ const IndexPage = () => {
                   placeholder='blurred'
                 />
                 <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
-                  <h2 className='text-2xl font-bold text-center uppercase xl:text-4xl'>
+                  <h2 className='text-2xl font-semibold text-center uppercase xl:text-4xl'>
                     Our Products
                   </h2>
                 </div>
@@ -45,7 +45,7 @@ const IndexPage = () => {
                   placeholder='blurred'
                 />
                 <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
-                  <h2 className='text-2xl font-bold text-center uppercase xl:text-4xl'>
+                  <h2 className='text-2xl font-semibold text-center uppercase xl:text-4xl'>
                     Our Services
                   </h2>
                 </div>
@@ -61,7 +61,7 @@ const IndexPage = () => {
                   alt='Image for customer zone page'
                 />
                 <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
-                  <h2 className='text-2xl font-bold text-center uppercase xl:text-4xl'>
+                  <h2 className='text-2xl font-semibold text-center uppercase xl:text-4xl'>
                     Customer Zone
                   </h2>
                 </div>
@@ -76,7 +76,7 @@ const IndexPage = () => {
                   placeholder='blurred'
                 />
                 <div className='z-10 flex items-center justify-center w-full py-2 overlay'>
-                  <h2 className='text-2xl font-bold text-center uppercase xl:text-4xl'>
+                  <h2 className='text-2xl font-semibold text-center uppercase xl:text-4xl'>
                     Contact Us
                   </h2>
                 </div>
