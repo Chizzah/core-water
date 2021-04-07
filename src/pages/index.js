@@ -13,16 +13,16 @@ const IndexPage = () => {
         title='Water Delivery Made Easy'
       />
       <section className='flex flex-col items-center justify-center'>
-        <h1 className='text-2xl font-semibold text-center text-gray-100 uppercase md:text-4xl'>
-          PREMIER WATER & RELATED PRODUCTS xD
+        <h1 className='text-2xl font-semibold text-center uppercase text-gray-50 md:text-4xl'>
+          PREMIER WATER & RELATED PRODUCTS
         </h1>
-        <h2 className='text-lg font-semibold text-center text-gray-100 capitalize md:text-3xl'>
+        <h2 className='text-lg font-semibold text-center capitalize text-gray-50 md:text-3xl'>
           Water Delivery Made Easy
         </h2>
         <section className='w-full pt-2 pb-5 md:pt-4 md:pb-10 md:mx-auto md:max-w-4xl'>
           <div className='flex flex-col items-center justify-center w-full md:flex-row'>
             <Link to='/products'>
-              <div className='relative flex items-end justify-center text-gray-100 w-80 h-80 md:w-60 md:h-60 lg:w-80 lg:h-80 xl:w-112 xl:h-112'>
+              <div className='relative flex items-end justify-center text-gray-50 w-80 h-80 md:w-60 md:h-60 lg:w-80 lg:h-80 xl:w-112 xl:h-112'>
                 <StaticImage
                   src='../images/products.jpg'
                   alt='Image for our products page'
@@ -38,7 +38,7 @@ const IndexPage = () => {
               </div>
             </Link>
             <Link to='/services'>
-              <div className='relative flex items-end justify-center text-gray-100 bg-local w-80 h-80 md:w-60 md:h-60 lg:w-80 lg:h-80 xl:w-112 xl:h-112'>
+              <div className='relative flex items-end justify-center bg-local text-gray-50 w-80 h-80 md:w-60 md:h-60 lg:w-80 lg:h-80 xl:w-112 xl:h-112'>
                 <StaticImage
                   src='../images/services.jpg'
                   alt='Image for our services page'
@@ -56,7 +56,7 @@ const IndexPage = () => {
           </div>
           <div className='flex flex-col items-center justify-center w-full md:flex-row'>
             <Link to='/account'>
-              <div className='relative flex items-end justify-center text-gray-100 w-80 h-80 md:w-60 md:h-60 lg:w-80 lg:h-80 xl:w-112 xl:h-112'>
+              <div className='relative flex items-end justify-center text-gray-50 w-80 h-80 md:w-60 md:h-60 lg:w-80 lg:h-80 xl:w-112 xl:h-112'>
                 <StaticImage
                   src='../images/customers.jpg'
                   alt='Image for customer zone page'
@@ -72,7 +72,7 @@ const IndexPage = () => {
               </div>
             </Link>
             <Link to='/contact'>
-              <div className='relative flex items-end justify-center text-gray-100 w-80 h-80 md:w-60 md:h-60 lg:w-80 lg:h-80 xl:w-112 xl:h-112'>
+              <div className='relative flex items-end justify-center text-gray-50 w-80 h-80 md:w-60 md:h-60 lg:w-80 lg:h-80 xl:w-112 xl:h-112'>
                 <StaticImage
                   src='../images/contact.jpg'
                   alt='Image for contact page'

@@ -31,7 +31,7 @@ const ContactForm = () => {
       />
 
       <input
-        className='w-full px-3 py-1 text-lg font-semibold text-gray-100 uppercase rounded-md cursor-pointer md:w-3/4 bg-SA-green hover:bg-green-400 hover'
+        className='w-full px-3 py-1 text-lg font-semibold text-gray-50 uppercase rounded-md cursor-pointer md:w-3/4 bg-SA-green hover:bg-green-400 hover'
         type='submit'
       />
     </form>

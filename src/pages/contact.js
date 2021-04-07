@@ -9,7 +9,7 @@ const ContactPage = () => {
   return (
     <Layout>
       <SEO keywords={[`contact core water`]} title='Contact Core Water' />
-      <section className='mx-4 text-lg text-gray-100 md:text-2xl md:mx-6'>
+      <section className='mx-4 text-lg text-gray-50 md:text-2xl md:mx-6'>
         {/* Business Details */}
 
         <section className='flex flex-col items-center justify-around py-10 md:flex-row md:py-20'>

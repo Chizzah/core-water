@@ -13,12 +13,12 @@ const ServicesPage = () => {
         title='Services'
       />
 
-      <section className='max-w-6xl mx-auto text-gray-100 md:pt-4'>
+      <section className='max-w-6xl mx-auto text-gray-50 md:pt-4'>
         <h1 className='ml-6 text-3xl font-semibold leading-none md:text-5xl'>
           Our <br /> Services
         </h1>
       </section>
-      <section className='max-w-5xl mx-auto text-gray-100'>
+      <section className='max-w-5xl mx-auto text-gray-50'>
         <div className='flex flex-col items-start justify-start w-full h-auto px-4 md:px-0'>
           <div className='mt-6 md:mt-12'>
             <div>

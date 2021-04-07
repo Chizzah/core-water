@@ -2,6 +2,8 @@ import React from 'react'
 import { silentAuth } from './src/utils/auth'
 import SimpleReactLightbox from 'simple-react-lightbox'
 
+import './src/css/style.css'
+
 class SessionCheck extends React.Component {
   constructor(props) {
     super(props)

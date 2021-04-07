@@ -4,10 +4,10 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const resolveConfig = require('tailwindcss/resolveConfig')
-const tailwindConfig = require('./tailwind.config.js')
+// const resolveConfig = require('tailwindcss/resolveConfig')
+// const tailwindConfig = require('./tailwind.config.js')
 
-const fullConfig = resolveConfig(tailwindConfig)
+// const fullConfig = resolveConfig(tailwindConfig)
 
 module.exports = {
   siteMetadata: {
@@ -37,6 +37,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-postcss`,
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
@@ -49,18 +50,6 @@ module.exports = {
     //     icon: `./static/logo/core-water-32x32.png`,
     //   },
     // },
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [
-          require(`tailwindcss`)(tailwindConfig),
-          require(`autoprefixer`),
-          ...(process.env.NODE_ENV === `production`
-            ? [require(`cssnano`)]
-            : []),
-        ],
-      },
-    },
     `gatsby-plugin-offline`,
   ],
 }

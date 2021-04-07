@@ -9,10 +9,10 @@ import TableContainer from '../../components/tableContainer'
 const Dashboard = ({ user }) => {
   return (
     <Layout>
-      <p className='pt-4 pl-4 text-lg font-semibold text-gray-100'>
+      <p className='pt-4 pl-4 text-lg font-semibold text-gray-50'>
         Hi, {user.name ? user.name : 'friend'}!
       </p>
-      <section className='flex flex-col items-center justify-center w-full h-screen text-gray-100'>
+      <section className='flex flex-col items-center justify-center w-full h-screen text-gray-50'>
         <TableContainer user={user} />
       </section>
     </Layout>
@@ -21,7 +21,7 @@ const Dashboard = ({ user }) => {
 const Profile = ({ user }) => {
   return (
     <Layout>
-      <section className='flex flex-col items-center justify-center w-full h-screen text-gray-100'>
+      <section className='flex flex-col items-center justify-center w-full h-screen text-gray-50'>
         <h1 className='text-3xl font-semibold text-center lg:text-5xl'>
           My Profile
         </h1>

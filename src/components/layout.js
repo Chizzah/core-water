@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from 'gatsby-plugin-image'
 import PropTypes from 'prop-types'
 
 import '../../static/fonts/fonts.css'
@@ -22,7 +22,7 @@ function Layout({ children }) {
           {children}
         </div>
 
-        <footer className='pb-4 text-xs text-center text-gray-100 md:border-b-16 md:border-l-16 md:border-r-16 md:border-gray-100 md:border-solid background-footer'>
+        <footer className='pb-4 text-xs text-center text-gray-50 md:border-b-16 md:border-l-16 md:border-r-16 md:border-gray-100 md:border-solid background-footer'>
           <p>Copyright © Core Water 2020 | All rights reserved</p>
           <p>
             JAMstack Website by {''}
